@@ -3,77 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>SWYR | عطرك .. هويتك - Luxury Fragrances</title>
-  <meta name="description" content="SWYR offers luxurious, long-lasting inspired perfumes. Discover your signature scent with our premium collection.">
-  <meta name="keywords" content="SWYR, سوير, عطر فاخر, عطور, perfumes, luxury, عود, مسك">
-  <!-- Fonts & Icons -->
+  <title>SWYR | عطرك .. هويتك</title>
+  <meta name="description" content="SWYR عطور فاخرة مستوحاة من أرقى البيوت العالمية. تجربة حسية تعكس شخصيتك.">
+  <!-- Google Fonts + Tajawal -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    /* SWYR Colors - Only specified colors */
+    /* Variables */
     :root {
-      --gold: #efb710;
-      --gold-light: #f7df92;
-      --gray: #626470;
-      --pink: #ffb3db;
-      --brown: #5d4545;
-      --beige: #c0b19b;
-      --bg-light: #ffffff;
-      --card-bg: #ffffff;
-      --text-light: #5d4545;
-      --shadow-sm: 0 8px 20px rgba(93,69,69,0.06);
-      --shadow-md: 0 15px 30px rgba(93,69,69,0.08);
-      --shadow-lg: 0 25px 45px rgba(93,69,69,0.12);
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --gold: #D4AF37;
+      --gold-dark: #B8902C;
+      --brown: #5A3E2B;
+      --brown-light: #7A5A42;
+      --beige: #F8F1E5;
+      --white: #FFFFFF;
+      --gray-bg: #F9F6F0;
+      --shadow: 0 8px 20px rgba(0,0,0,0.05);
+      --shadow-hover: 0 15px 30px rgba(0,0,0,0.1);
+      --transition: all 0.3s ease;
     }
-
     body.dark {
-      --bg-light: #1a1a24;
-      --card-bg: #252531;
-      --text-light: #f0ead6;
-      --shadow-sm: 0 8px 20px rgba(0,0,0,0.2);
-      --shadow-md: 0 15px 30px rgba(0,0,0,0.3);
-      --shadow-lg: 0 25px 45px rgba(0,0,0,0.4);
+      --beige: #1E1E2A;
+      --white: #2A2A35;
+      --gray-bg: #252530;
+      --brown: #F0EAD6;
+      --brown-light: #D1C7B8;
+      --shadow: 0 8px 20px rgba(0,0,0,0.2);
+      --shadow-hover: 0 15px 30px rgba(0,0,0,0.3);
     }
 
     body {
       font-family: 'Tajawal', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-light);
+      background: var(--beige);
+      color: var(--brown);
       transition: var(--transition);
       scroll-behavior: smooth;
     }
 
-    /* Custom Scroll */
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--pink); border-radius: 10px; }
+    ::-webkit-scrollbar-track { background: #E9DBCB; border-radius: 10px; }
     ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
 
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
 
-    /* Header */
+    /* ========== Header ========== */
     .header {
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255,255,255,0.96);
       backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 100;
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(239, 183, 16, 0.2);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-    body.dark .header { background: rgba(26, 26, 36, 0.96); }
+    body.dark .header { background: rgba(30,30,42,0.96); }
     .header-flex {
       display: flex;
       justify-content: space-between;
@@ -84,7 +70,7 @@
     .logo h1 {
       font-size: 1.8rem;
       font-weight: 800;
-      background: linear-gradient(135deg, var(--gold), var(--pink), var(--brown));
+      background: linear-gradient(135deg, var(--gold), var(--brown));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -92,14 +78,13 @@
     .search-box {
       display: flex;
       align-items: center;
-      background: var(--card-bg);
-      border: 1px solid var(--beige);
-      border-radius: 60px;
+      background: var(--white);
+      border-radius: 48px;
       padding: 8px 20px;
       width: 280px;
-      transition: var(--transition);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(212,175,55,0.3);
     }
-    .search-box:focus-within { box-shadow: 0 0 0 2px var(--gold); }
     .search-box input {
       background: transparent;
       border: none;
@@ -107,44 +92,33 @@
       font-family: inherit;
       font-size: 0.9rem;
       outline: none;
-      color: var(--text-light);
+      color: var(--brown);
     }
     .search-box i { color: var(--gold); }
-    .header-actions {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-    }
+    .header-actions { display: flex; gap: 12px; align-items: center; }
     .icon-btn {
-      background: var(--card-bg);
-      width: 45px;
-      height: 45px;
+      background: var(--white);
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--beige);
-      color: var(--text-light);
+      box-shadow: var(--shadow);
+      color: var(--brown);
     }
-    .icon-btn:hover {
-      transform: translateY(-3px);
-      background: var(--gold);
-      color: white;
-    }
+    .icon-btn:hover { background: var(--gold); color: white; transform: translateY(-2px); }
     .lang-btn {
-      background: var(--card-bg);
+      background: var(--white);
       padding: 8px 18px;
       border-radius: 40px;
       cursor: pointer;
       font-weight: bold;
-      border: 1px solid var(--beige);
       font-family: inherit;
-      transition: var(--transition);
+      box-shadow: var(--shadow);
     }
-    .lang-btn:hover { background: var(--gold-light); }
     .cart-icon { position: relative; }
     .cart-count {
       position: absolute;
@@ -162,284 +136,127 @@
       font-weight: bold;
     }
 
-    /* Brand Banner */
-    .brand-banner {
-      background: linear-gradient(125deg, var(--gold-light)15, var(--pink)20, transparent);
-      border-radius: 32px;
-      margin: 30px 0;
-      padding: 30px 40px;
-      text-align: center;
-    }
-    .brand-banner h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    .brand-banner p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: var(--brown);
-    }
-
-    /* Hero Slider */
-    .hero-slider {
-      margin: 20px 0 40px;
+    /* ========== Hero ========== */
+    .hero {
+      background: linear-gradient(135deg, var(--gold)10, var(--beige)80);
       border-radius: 40px;
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-    .swiper-slide {
-      background: linear-gradient(125deg, var(--gold)10, var(--pink)15, var(--bg-light)70);
+      margin: 40px 0 50px;
       padding: 60px 40px;
       text-align: center;
     }
-    .swiper-slide img {
-      width: 160px;
-      height: auto;
-      border-radius: 30px;
-      box-shadow: var(--shadow-lg);
-      margin-bottom: 20px;
-    }
-    .swiper-slide h3 {
-      font-size: 1.8rem;
-      background: linear-gradient(135deg, var(--gold), var(--brown));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    /* Second Slider - Best of 2026 */
-    .second-slider {
-      margin: 50px 0;
-    }
-    .slider-title {
-      font-size: 1.6rem;
+    .hero h2 {
+      font-size: 2.5rem;
       font-weight: 800;
-      margin-bottom: 25px;
-      position: relative;
-      display: inline-block;
-    }
-    .slider-title:after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      right: 0;
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-    }
-    .category-slider {
-      margin-bottom: 40px;
-    }
-    .category-slider h4 {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-    .swiper-category {
-      overflow: hidden;
-      padding: 10px 5px;
-    }
-    .swiper-category .swiper-slide {
-      background: var(--card-bg);
-      border-radius: 24px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      cursor: pointer;
-      transition: var(--transition);
-    }
-    .swiper-category .swiper-slide:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-    }
-    .swiper-category img {
-      width: 100%;
-      max-width: 120px;
-      border-radius: 20px;
       margin-bottom: 15px;
     }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
 
-    /* Layout */
+    /* ========== Layout ========== */
     .shop-layout {
       display: flex;
-      gap: 35px;
-      margin: 40px 0;
+      gap: 30px;
+      margin: 30px 0;
     }
-    /* Sidebar */
+    /* Sidebar Filters */
     .filters-sidebar {
-      width: 280px;
+      width: 260px;
       flex-shrink: 0;
-      background: var(--card-bg);
+      background: var(--white);
       border-radius: 32px;
-      padding: 28px;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--beige);
+      padding: 24px;
+      box-shadow: var(--shadow);
       align-self: start;
       position: sticky;
-      top: 100px;
+      top: 90px;
     }
-    .filter-section {
-      margin-bottom: 30px;
-    }
+    .filter-section { margin-bottom: 28px; }
     .filter-title {
       font-weight: 800;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
       font-size: 1rem;
       border-right: 3px solid var(--gold);
       padding-right: 12px;
     }
-    .filter-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
     .filter-btn {
       background: transparent;
-      border: 1px solid var(--beige);
+      border: 1px solid #E2D5C3;
       padding: 6px 14px;
       border-radius: 40px;
       cursor: pointer;
       transition: var(--transition);
       font-family: inherit;
       font-size: 0.8rem;
-      color: var(--text-light);
     }
     .filter-btn.active, .filter-btn:hover {
       background: var(--gold);
       border-color: var(--gold);
-      color: white;
-      transform: translateY(-2px);
+      color: var(--white);
     }
 
     /* Products Main */
-    .products-main {
-      flex: 1;
-    }
-    .trend-section {
-      background: linear-gradient(125deg, var(--gold)8, var(--pink)10, transparent);
-      border-radius: 32px;
-      padding: 30px;
-      margin-bottom: 40px;
-    }
-    .trend-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .trend-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 25px;
-    }
-    .trend-item {
-      background: var(--card-bg);
-      border-radius: 24px;
-      padding: 20px;
-      text-align: center;
-      transition: var(--transition);
-      cursor: pointer;
-      position: relative;
-    }
-    .trend-item:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-    }
-    .trend-rank {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      background: var(--gold);
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      color: var(--brown);
-    }
-    .trend-item img {
-      width: 100%;
-      max-width: 100px;
-      border-radius: 20px;
-      margin-bottom: 15px;
-    }
-
-    .main-category {
-      margin-bottom: 50px;
-    }
+    .products-main { flex: 1; }
+    .category-section { margin-bottom: 50px; }
     .category-title {
       font-size: 1.6rem;
       font-weight: 800;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       border-right: 4px solid var(--gold);
-      padding-right: 18px;
+      padding-right: 16px;
     }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 30px;
+      gap: 28px;
     }
     .product-card {
-      background: var(--card-bg);
+      background: var(--white);
       border-radius: 28px;
       overflow: hidden;
       transition: var(--transition);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow);
       cursor: pointer;
-      border: 1px solid var(--beige);
     }
     .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--gold);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
     }
     .product-img {
       height: 230px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffffff;
+      background: #FAF6EF;
       padding: 20px;
     }
     .product-img img {
       max-width: 85%;
       max-height: 85%;
-      transition: transform 0.5s;
+      transition: transform 0.4s;
     }
     .product-card:hover .product-img img { transform: scale(1.02); }
-    .product-info {
-      padding: 20px;
-    }
-    .product-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
-    .product-price {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 8px 0;
-    }
-    .product-badges {
+    .product-info { padding: 20px; }
+    .product-title { font-size: 1.1rem; font-weight: 800; margin-bottom: 5px; }
+    .product-price { font-size: 1rem; font-weight: 700; color: var(--gold); margin: 8px 0; }
+    .badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 6px;
       margin-top: 8px;
     }
-    .badge-tag {
-      background: var(--pink);
+    .badge {
+      background: #F3E9DD;
       color: var(--brown);
       font-size: 0.65rem;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 30px;
     }
 
@@ -451,26 +268,25 @@
       width: 100%;
       height: 100%;
       background: rgba(0,0,0,0.85);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(8px);
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: center;
       visibility: hidden;
       opacity: 0;
-      transition: 0.25s;
+      transition: 0.2s;
     }
     .modal.open { visibility: visible; opacity: 1; }
     .modal-content {
-      background: var(--card-bg);
-      max-width: 600px;
+      background: var(--white);
+      max-width: 550px;
       width: 90%;
       max-height: 85vh;
       overflow-y: auto;
-      border-radius: 48px;
-      padding: 32px;
+      border-radius: 40px;
+      padding: 28px;
       position: relative;
-      border-top: 5px solid var(--gold);
     }
     .close-modal {
       position: absolute;
@@ -478,32 +294,45 @@
       left: 20px;
       width: 36px;
       height: 36px;
-      background: var(--pink);
+      background: #F0E6DA;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: var(--transition);
     }
-    .close-modal:hover { background: var(--gold); }
-    .size-selector { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+    .size-selector { display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; }
     .size-opt {
-      padding: 8px 20px;
-      border-radius: 60px;
-      background: var(--bg-light);
-      border: 1px solid var(--beige);
+      padding: 8px 22px;
+      border-radius: 50px;
+      background: #F5EDE3;
       cursor: pointer;
     }
-    .size-opt.active { background: var(--gold); color: white; border-color: var(--gold); }
-    .qty-control { display: flex; align-items: center; gap: 20px; margin: 20px 0; }
+    .size-opt.active { background: var(--gold); color: white; }
+    .qty-control {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
     .qty-btn {
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: var(--gold-light);
+      background: var(--gold);
       border: none;
       font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .add-cart-btn {
+      background: var(--gold);
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 60px;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 20px;
       cursor: pointer;
     }
 
@@ -511,20 +340,20 @@
     .cart-drawer {
       position: fixed;
       top: 0;
-      left: -420px;
-      width: 400px;
+      left: -400px;
+      width: 380px;
       height: 100%;
-      background: var(--card-bg);
+      background: var(--white);
       z-index: 1100;
       transition: left 0.3s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+      box-shadow: -5px 0 30px rgba(0,0,0,0.15);
     }
     .cart-drawer.open { left: 0; }
-    .cart-header { padding: 20px; border-bottom: 1px solid var(--beige); display: flex; justify-content: space-between; font-weight: 800; }
+    .cart-header { padding: 20px; border-bottom: 1px solid #E2D5C3; display: flex; justify-content: space-between; font-weight: 800; }
     .cart-items { flex: 1; overflow: auto; padding: 20px; }
-    .cart-footer { padding: 20px; border-top: 1px solid var(--beige); }
+    .cart-footer { padding: 20px; border-top: 1px solid #E2D5C3; }
     .whatsapp-btn {
       background: #25D366;
       width: 100%;
@@ -555,19 +384,18 @@
       z-index: 99;
     }
     .scroll-top.show { opacity: 1; }
-    .scroll-top:hover { transform: translateY(-3px); background: var(--gold-light); }
 
     footer {
       text-align: center;
       padding: 40px 20px;
-      border-top: 1px solid var(--beige);
+      border-top: 1px solid #E2D5C3;
       margin-top: 60px;
     }
     .social-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
-    .social-link { font-size: 1.4rem; color: var(--gray); transition: 0.2s; }
+    .social-link { font-size: 1.4rem; color: #7A6A5A; transition: 0.2s; }
     .social-link:hover { color: var(--gold); transform: translateY(-3px); }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 900px) {
       .shop-layout { flex-direction: column; }
       .filters-sidebar { width: 100%; position: static; }
       .container { padding: 0 20px; }
@@ -589,326 +417,194 @@
 </div>
 
 <div class="container">
-  <!-- Brand Banner -->
-  <div class="brand-banner" id="brandBanner">
-    <h2 data-ar="عطرك .. هويتك" data-en="Your Scent.. Your Identity">عطرك .. هويتك</h2>
-    <p data-ar="ليست مجرد عطور، بل تجربة حسية تعكس شخصيتك. مستوحاة من أرقى البيوت العالمية." data-en="Not just perfumes, but a sensory experience reflecting your personality. Inspired by the finest houses.">ليست مجرد عطور، بل تجربة حسية تعكس شخصيتك. مستوحاة من أرقى البيوت العالمية.</p>
-  </div>
-
-  <!-- Hero Slider -->
-  <div class="hero-slider swiper" id="heroSlider">
-    <div class="swiper-wrapper"></div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Second Slider: Best of 2026 by categories -->
-  <div class="second-slider">
-    <div class="slider-title" data-ar="أفضل عطور 2026" data-en="Best Perfumes 2026">أفضل عطور 2026</div>
-    <div class="category-slider">
-      <h4 data-ar="رجالي" data-en="Men">رجالي</h4>
-      <div class="swiper swiper-category" id="sliderMen"><div class="swiper-wrapper"></div><div class="swiper-pagination"></div></div>
-    </div>
-    <div class="category-slider">
-      <h4 data-ar="نسائي" data-en="Women">نسائي</h4>
-      <div class="swiper swiper-category" id="sliderWomen"><div class="swiper-wrapper"></div><div class="swiper-pagination"></div></div>
-    </div>
-    <div class="category-slider">
-      <h4 data-ar="للجنسين" data-en="Unisex">للجنسين</h4>
-      <div class="swiper swiper-category" id="sliderUnisex"><div class="swiper-wrapper"></div><div class="swiper-pagination"></div></div>
-    </div>
+  <div class="hero">
+    <h2 id="heroTitle">عطرك .. هويتك</h2>
+    <p id="heroDesc">ليست مجرد عطور، بل تجربة حسية تعكس شخصيتك. مستوحاة من أرقى البيوت العالمية.</p>
   </div>
 
   <div class="shop-layout">
     <aside class="filters-sidebar">
-      <div class="filter-section">
-        <div class="filter-title" data-ar="النوع الرئيسي" data-en="Main Category">النوع الرئيسي</div>
-        <div class="filter-buttons" id="mainCatFilters">
-          <button class="filter-btn active" data-main="all" data-ar="الكل" data-en="All">الكل</button>
-          <button class="filter-btn" data-main="men" data-ar="رجالي" data-en="Men">رجالي</button>
-          <button class="filter-btn" data-main="women" data-ar="نسائي" data-en="Women">نسائي</button>
-          <button class="filter-btn" data-main="unisex" data-ar="للجنسين" data-en="Unisex">للجنسين</button>
-        </div>
-      </div>
-      <div class="filter-section">
-        <div class="filter-title" data-ar="الفئة العطرية" data-en="Fragrance Family">الفئة العطرية</div>
-        <div class="filter-buttons" id="subCatFilters">
-          <button class="filter-btn active" data-sub="all" data-ar="جميع الفئات" data-en="All">جميع الفئات</button>
-          <button class="filter-btn" data-sub="floral" data-ar="زهري" data-en="Floral">زهري</button>
-          <button class="filter-btn" data-sub="oud" data-ar="عود" data-en="Oud">عود</button>
-          <button class="filter-btn" data-sub="musk" data-ar="مسك" data-en="Musk">مسك</button>
-          <button class="filter-btn" data-sub="spicy" data-ar="توابل" data-en="Spicy">توابل</button>
-          <button class="filter-btn" data-sub="fruity" data-ar="فاكهي" data-en="Fruity">فاكهي</button>
-          <button class="filter-btn" data-sub="aquatic" data-ar="بحري" data-en="Aquatic">بحري</button>
-          <button class="filter-btn" data-sub="oriental" data-ar="شرقي" data-en="Oriental">شرقي</button>
-          <button class="filter-btn" data-sub="leather" data-ar="جلدي" data-en="Leather">جلدي</button>
-          <button class="filter-btn" data-sub="woody" data-ar="خشبي" data-en="Woody">خشبي</button>
-        </div>
-      </div>
+      <div class="filter-section"><div class="filter-title" id="mainCatTitle">النوع الرئيسي</div><div class="filter-buttons" id="mainCatFilters"><button class="filter-btn active" data-main="all">الكل</button><button class="filter-btn" data-main="men">رجالي</button><button class="filter-btn" data-main="women">نسائي</button><button class="filter-btn" data-main="unisex">للجنسين</button></div></div>
+      <div class="filter-section"><div class="filter-title" id="subCatTitle">الفئة العطرية</div><div class="filter-buttons" id="subCatFilters"><button class="filter-btn active" data-sub="all">جميع الفئات</button><button class="filter-btn" data-sub="floral">زهري</button><button class="filter-btn" data-sub="oud">عود</button><button class="filter-btn" data-sub="musk">مسك</button><button class="filter-btn" data-sub="spicy">توابل</button><button class="filter-btn" data-sub="fruity">فاكهي</button><button class="filter-btn" data-sub="aquatic">بحري</button><button class="filter-btn" data-sub="oriental">شرقي</button><button class="filter-btn" data-sub="leather">جلدي</button><button class="filter-btn" data-sub="woody">خشبي</button></div></div>
     </aside>
 
-    <div class="products-main">
-      <div class="trend-section">
-        <div class="trend-title"><span data-ar="الأكثر مبيعاً عالمياً 2026" data-en="Best Sellers Worldwide 2026">الأكثر مبيعاً عالمياً 2026</span> <i class="fas fa-fire" style="color:var(--gold);"></i></div>
-        <div class="trend-grid" id="trendGrid"></div>
-      </div>
-      <div id="mainContent"></div>
-    </div>
+    <div class="products-main" id="productsMain"></div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal" id="productModal">
-  <div class="modal-content">
-    <div class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></div>
-    <div id="modalDynamicContent"></div>
-  </div>
-</div>
+<div class="modal" id="productModal"><div class="modal-content"><div class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></div><div id="modalDynamicContent"></div></div></div>
 
-<!-- Cart Drawer -->
-<div class="cart-drawer" id="cartDrawer">
-  <div class="cart-header"><span><i class="fas fa-shopping-bag"></i> <span data-ar="سلة التسوق" data-en="Shopping Cart">سلة التسوق</span></span><button id="closeCartBtn" style="background:none; border:none; font-size:1.3rem;"><i class="fas fa-times"></i></button></div>
-  <div class="cart-items" id="cartItemsList"></div>
-  <div class="cart-footer">
-    <div style="display:flex; justify-content:space-between; font-weight:800;"><span data-ar="الإجمالي" data-en="Total">الإجمالي</span><span id="cartTotal">0 ج.م</span></div>
-    <button class="whatsapp-btn" id="whatsappOrderBtn"><i class="fab fa-whatsapp"></i> <span data-ar="تأكيد الطلب عبر واتساب" data-en="Confirm Order via WhatsApp">تأكيد الطلب عبر واتساب</span></button>
-  </div>
-</div>
+<!-- Cart -->
+<div class="cart-drawer" id="cartDrawer"><div class="cart-header"><span>سلة التسوق</span><button id="closeCartBtn" style="background:none; border:none; font-size:1.3rem;"><i class="fas fa-times"></i></button></div><div class="cart-items" id="cartItemsList"></div><div class="cart-footer"><div style="display:flex; justify-content:space-between; font-weight:800;"><span>الإجمالي</span><span id="cartTotal">0 ج.م</span></div><button class="whatsapp-btn" id="whatsappOrderBtn"><i class="fab fa-whatsapp"></i> تأكيد الطلب عبر واتساب</button><p style="font-size:12px; margin-top:10px;">سيتم نسخ الطلب ولصقه في المحادثة</p></div></div>
 
-<footer>
-  <div class="social-links">
-    <a href="https://www.instagram.com/swyrbeauty/" class="social-link"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@swyrperfumes" class="social-link"><i class="fab fa-tiktok"></i></a>
-    <a href="https://www.facebook.com/people/SWYR/61563925810810/" class="social-link"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.linkedin.com/company/swyr-perfumes/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-  </div>
-  <p>© 2025 SWYR - <span data-ar="عطور أصلية 100% | شحن سريع لجميع المحافظات" data-en="100% Original Fragrances | Fast Shipping">عطور أصلية 100% | شحن سريع لجميع المحافظات</span></p>
-</footer>
+<footer><div class="social-links"><a href="https://www.instagram.com/swyrbeauty/" class="social-link"><i class="fab fa-instagram"></i></a><a href="https://www.tiktok.com/@swyrperfumes" class="social-link"><i class="fab fa-tiktok"></i></a><a href="https://www.facebook.com/people/SWYR/61563925810810/" class="social-link"><i class="fab fa-facebook-f"></i></a><a href="https://www.linkedin.com/company/swyr-perfumes/" class="social-link"><i class="fab fa-linkedin-in"></i></a></div><p>© 2025 SWYR - عطور أصلية 100% | شحن سريع</p></footer>
 
 <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  // ---------- PRODUCTS DATABASE (Real fragrances with real images) ----------
+  // ========== منتجات حقيقية (صور وأوصاف صحيحة) ==========
   const products = [
-    { id:1, name:"سافاج ديور", nameEn:"Sauvage Dior", cat:"men", types:["spicy","aquatic"], price50:300, price100:550, desc:"عطر جريء مستوحى من الصحراء. مزيج من البرغموت، فلفل سيشوان، وخشب الأرز.", descEn:"Bold scent inspired by the desert. Blend of bergamot, Sichuan pepper, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.209.jpg", trend:true, rank:1 },
-    { id:2, name:"جادور ديور", nameEn:"J'adore Dior", cat:"women", types:["floral","fruity"], price50:300, price100:550, desc:"أنوثة متألقة بمزيج من الياسمين، الورد، وزهر البرتقال.", descEn:"Radiant femininity with jasmine, rose, and orange blossom.", img:"https://fimgs.net/mdimg/perfume/375x500.278.jpg", trend:true, rank:2 },
-    { id:3, name:"توم فود أومبري لذر", nameEn:"Tom Ford Oud Wood", cat:"unisex", types:["oud","leather"], price50:300, price100:550, desc:"عود فاخر مع لمسات من خشب الصندل والفانيليا والجلد.", descEn:"Luxurious oud with sandalwood, vanilla, and leather.", img:"https://fimgs.net/mdimg/perfume/375x500.1497.jpg", trend:true, rank:3 },
-    { id:4, name:"بليدجيد شانيل", nameEn:"Bleu de Chanel", cat:"men", types:["spicy","woody"], price50:300, price100:550, desc:"كلاسيكي عصري مع الجريب فروت، الزنجبيل، واللبان.", descEn:"Modern classic with grapefruit, ginger, and frankincense.", img:"https://fimgs.net/mdimg/perfume/375x500.524.jpg", trend:true, rank:4 },
-    { id:5, name:"كوكو مادموازيل", nameEn:"Coco Mademoiselle", cat:"women", types:["oriental","floral"], price50:300, price100:550, desc:"شرقي فاخر بمكونات البرغموت، الياسمين، والمسك.", descEn:"Oriental luxury with bergamot, jasmine, and musk.", img:"https://fimgs.net/mdimg/perfume/375x500.169.jpg", trend:true, rank:5 },
-    { id:6, name:"أفينتوس كريد", nameEn:"Creed Aventus", cat:"men", types:["fruity","leather"], price50:300, price100:550, desc:"أسطورة الفواكه والجلد مع الأناناس، البتشولي، وخشب البتولا.", descEn:"Legendary fruits and leather with pineapple, patchouli, and birch.", img:"https://fimgs.net/mdimg/perfume/375x500.1175.jpg", trend:true, rank:6 },
-    { id:7, name:"لا فيستا بيل", nameEn:"La Vie Est Belle", cat:"women", types:["floral","gourmand"], price50:300, price100:550, desc:"سعادة وحلاوة مع الكشمير، السوسن، والفانيليا.", descEn:"Happiness and sweetness with cashmeran, iris, and vanilla.", img:"https://fimgs.net/mdimg/perfume/375x500.1152.jpg", trend:true, rank:7 },
-    { id:8, name:"بلاك أوبيوم", nameEn:"Black Opium", cat:"women", types:["oriental","spicy"], price50:300, price100:550, desc:"جريء ليلي مع القهوة، الفانيليا، وزهر البرتقال.", descEn:"Bold night scent with coffee, vanilla, and orange blossom.", img:"https://fimgs.net/mdimg/perfume/375x500.3571.jpg", trend:false },
-    { id:9, name:"أكوا دي جيو", nameEn:"Acqua di Gio", cat:"men", types:["aquatic","floral"], price50:300, price100:550, desc:"انتعاش البحر مع الياسمين، إكليل الجبل، وخشب الأرز.", descEn:"Sea freshness with jasmine, rosemary, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.40.jpg", trend:false },
-    { id:10, name:"سي كيه ون", nameEn:"CK One", cat:"unisex", types:["floral","aquatic"], price50:300, price100:550, desc:"حيادي منعش مع الأناناس، الياسمين، والمسك.", descEn:"Neutral fresh scent with pineapple, jasmine, and musk.", img:"https://fimgs.net/mdimg/perfume/375x500.219.jpg", trend:true, rank:8 },
-    { id:11, name:"شغاف عود", nameEn:"Shaghaf Oud", cat:"unisex", types:["oud","oriental"], price50:300, price100:550, desc:"عود شرقي أسطوري مع الزعفران، الورد، وخشب العود.", descEn:"Legendary oriental oud with saffron, rose, and oud wood.", img:"https://fimgs.net/mdimg/perfume/375x500.23385.jpg", trend:false },
-    { id:12, name:"مسك أبيض", nameEn:"White Musk", cat:"unisex", types:["musk","floral"], price50:300, price100:550, desc:"نقاء المسك الأبيض مع الليمون، زهر البرتقال، وخشب الأرز.", descEn:"Pure white musk with lemon, orange blossom, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.1526.jpg", trend:false },
-    { id:13, name:"ديلينا", nameEn:"Delina", cat:"women", types:["floral","fruity"], price50:300, price100:550, desc:"أناقة الورد والليتشي مع المسك والفانيليا.", descEn:"Elegance of rose and lychee with musk and vanilla.", img:"https://fimgs.net/mdimg/perfume/375x500.22548.jpg", trend:true, rank:9 },
-    { id:14, name:"عود إصفهان", nameEn:"Oud Ispahan", cat:"unisex", types:["oud","rose"], price50:300, price100:550, desc:"عود وورد في توليفة شرقية ساحرة.", descEn:"Oud and rose in an enchanting oriental blend.", img:"https://fimgs.net/mdimg/perfume/375x500.14238.jpg", trend:false },
-    { id:15, name:"تيري دي هيرميس", nameEn:"Terre d'Hermès", cat:"men", types:["woody","spicy"], price50:300, price100:550, desc:"ترابي وخشبي مع البرتقال، الفلفل، وخشب الأرز.", descEn:"Earthy and woody with orange, pepper, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.369.jpg", trend:true, rank:10 }
+    { id:1, name:"سافاج ديور", nameEn:"Sauvage Dior", cat:"men", types:["spicy","aquatic"], price50:300, price100:550, desc:"عطر جريء مستوحى من الصحراء. مزيج من برغموت كالابريا، فلفل سيشوان، أمبروكسان، ومسك الحوت الخشبي.", descEn:"Bold desert-inspired scent. Blend of Calabrian bergamot, Sichuan pepper, Ambroxan, and woody ambergris.", img:"https://fimgs.net/mdimg/perfume/375x500.209.jpg" },
+    { id:2, name:"جادور ديور", nameEn:"J'adore Dior", cat:"women", types:["floral","fruity"], price50:300, price100:550, desc:"أنوثة متألقة بمزيج من يلانج يلانج، ورد دمشق، ياسمين جراندفلوروم، وزهر البرتقال.", descEn:"Radiant femininity with Ylang-Ylang, Damascus Rose, Jasmine Grandiflorum, and Orange Blossom.", img:"https://fimgs.net/mdimg/perfume/375x500.278.jpg" },
+    { id:3, name:"توم فود أومبري لذر", nameEn:"Tom Ford Oud Wood", cat:"unisex", types:["oud","leather"], price50:300, price100:550, desc:"عود فاخر مع لمسات من خشب الورد، الهيل، خشب الصندل، الفيتيفير، الفانيليا، والعنبر.", descEn:"Luxurious oud with rosewood, cardamom, sandalwood, vetiver, vanilla, and amber.", img:"https://fimgs.net/mdimg/perfume/375x500.1497.jpg" },
+    { id:4, name:"بليدجيد شانيل", nameEn:"Bleu de Chanel", cat:"men", types:["spicy","woody"], price50:300, price100:550, desc:"عطر خشبي عطري مع الجريب فروت، الليمون، النعناع، الزنجبيل، جوزة الطيب، والبخور.", descEn:"Aromatic woody scent with grapefruit, lemon, mint, ginger, nutmeg, and incense.", img:"https://fimgs.net/mdimg/perfume/375x500.524.jpg" },
+    { id:5, name:"كوكو مادموازيل", nameEn:"Coco Mademoiselle", cat:"women", types:["oriental","floral"], price50:300, price100:550, desc:"شرقي فاخر مع البرغموت، البرتقال، الياسمين، الورد التركي، المسك الأبيض، الفانيليا، والباتشولي.", descEn:"Oriental luxury with bergamot, orange, jasmine, Turkish rose, white musk, vanilla, and patchouli.", img:"https://fimgs.net/mdimg/perfume/375x500.169.jpg" },
+    { id:6, name:"أفينتوس كريد", nameEn:"Creed Aventus", cat:"men", types:["fruity","leather"], price50:300, price100:550, desc:"أسطورة الفواكه والجلد مع الأناناس، البرغموت، التفاح، البتشولي، وخشب البتولا.", descEn:"Legendary fruits and leather with pineapple, bergamot, apple, patchouli, and birch.", img:"https://fimgs.net/mdimg/perfume/375x500.1175.jpg" },
+    { id:7, name:"لا فيستا بيل", nameEn:"La Vie Est Belle", cat:"women", types:["floral","gourmand"], price50:300, price100:550, desc:"سعادة وحلاوة مع الكشمير، السوسن، والفانيليا.", descEn:"Happiness and sweetness with cashmeran, iris, and vanilla.", img:"https://fimgs.net/mdimg/perfume/375x500.1152.jpg" },
+    { id:8, name:"بلاك أوبيوم", nameEn:"Black Opium", cat:"women", types:["oriental","spicy"], price50:300, price100:550, desc:"جريء ليلي مع القهوة، الفانيليا، زهر البرتقال، الياسمين، وخشب الأرز.", descEn:"Bold night scent with coffee, vanilla, orange blossom, jasmine, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.3571.jpg" },
+    { id:9, name:"أكوا دي جيو", nameEn:"Acqua di Gio", cat:"men", types:["aquatic","floral"], price50:300, price100:550, desc:"انتعاش البحر مع الياسمين، إكليل الجبل، وخشب الأرز.", descEn:"Sea freshness with jasmine, rosemary, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.40.jpg" },
+    { id:10, name:"سي كيه ون", nameEn:"CK One", cat:"unisex", types:["floral","aquatic"], price50:300, price100:550, desc:"حيادي منعش مع الأناناس، الياسمين، والمسك.", descEn:"Neutral fresh scent with pineapple, jasmine, and musk.", img:"https://fimgs.net/mdimg/perfume/375x500.219.jpg" },
+    { id:11, name:"ديلينا", nameEn:"Delina", cat:"women", types:["floral","fruity"], price50:300, price100:550, desc:"أناقة الورد والليتشي مع المسك والفانيليا.", descEn:"Elegance of rose and lychee with musk and vanilla.", img:"https://fimgs.net/mdimg/perfume/375x500.22548.jpg" },
+    { id:12, name:"تيري دي هيرميس", nameEn:"Terre d'Hermès", cat:"men", types:["woody","spicy"], price50:300, price100:550, desc:"ترابي وخشبي مع البرتقال، الفلفل، وخشب الأرز.", descEn:"Earthy and woody with orange, pepper, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.369.jpg" },
+    { id:13, name:"ليبر", nameEn:"Libre", cat:"women", types:["oriental","spicy"], price50:300, price100:550, desc:"عطر تحرر وأناقة مع اللافندر، البرتقال، الفانيليا، والمسك.", descEn:"Liberty and elegance with lavender, orange, vanilla, and musk.", img:"https://fimgs.net/mdimg/perfume/375x500.40831.jpg" },
+    { id:14, name:"ميلسيم إمبريال", nameEn:"Millesime Imperial", cat:"men", types:["aquatic","fruity"], price50:300, price100:550, desc:"ملكي ومنعش مع البطيخ، زهر البرتقال، والمسك.", descEn:"Royal and fresh with watermelon, orange blossom, and musk.", img:"https://fimgs.net/mdimg/perfume/375x500.1032.jpg" },
+    { id:15, name:"جنتلمن جيفنشي", nameEn:"Gentleman Givenchy", cat:"men", types:["woody","spicy"], price50:300, price100:550, desc:"أناقة عصرية مع الخزامى، القرفة، الجلد، وخشب الأرز.", descEn:"Modern elegance with lavender, cinnamon, leather, and cedarwood.", img:"https://fimgs.net/mdimg/perfume/375x500.18910.jpg" }
   ];
 
-  // Cart & State
+  // State
   let cart = [];
-  let isDark = localStorage.getItem('swyr_dark') === 'true';
+  let isDark = false;
   let isArabic = true;
   let currentMain = "all";
   let currentSub = "all";
   let searchTerm = "";
 
-  // Helper: get localized text
-  function t(ar, en) { return isArabic ? ar : en; }
+  let currentProduct = null;
+  let currentSize = "50ml";
+  let currentQty = 1;
 
-  // Apply theme
+  // Helper
   function applyTheme() { document.body.classList.toggle('dark', isDark); localStorage.setItem('swyr_dark', isDark); }
-
-  // Update all UI text based on language
   function updateLanguage() {
     document.getElementById('langToggle').innerText = isArabic ? "English" : "العربية";
-    document.querySelectorAll('[data-ar][data-en]').forEach(el => {
-      el.innerText = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+    document.getElementById('heroTitle').innerText = isArabic ? "عطرك .. هويتك" : "Your Scent.. Your Identity";
+    document.getElementById('heroDesc').innerHTML = isArabic ? "ليست مجرد عطور، بل تجربة حسية تعكس شخصيتك." : "Not just perfumes, but a sensory experience reflecting your personality.";
+    document.getElementById('mainCatTitle').innerText = isArabic ? "النوع الرئيسي" : "Main Category";
+    document.getElementById('subCatTitle').innerText = isArabic ? "الفئة العطرية" : "Fragrance Family";
+    document.querySelectorAll('#mainCatFilters .filter-btn').forEach(btn => {
+      const ar = btn.getAttribute('data-ar'), en = btn.getAttribute('data-en');
+      if(ar && en) btn.innerText = isArabic ? ar : en;
     });
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      const ar = btn.getAttribute('data-ar');
-      const en = btn.getAttribute('data-en');
-      if (ar && en) btn.innerText = isArabic ? ar : en;
+    document.querySelectorAll('#subCatFilters .filter-btn').forEach(btn => {
+      const ar = btn.getAttribute('data-ar'), en = btn.getAttribute('data-en');
+      if(ar && en) btn.innerText = isArabic ? ar : en;
     });
-    renderHeroSlider();
-    renderCategorySliders();
-    renderTrend();
     renderProducts();
   }
 
-  // Hero Slider
-  function renderHeroSlider() {
-    const trending = products.filter(p => p.trend).slice(0, 6);
-    const html = trending.map(p => `
-      <div class="swiper-slide">
-        <img src="${p.img}" alt="${p.name}">
-        <h3>${isArabic ? p.name : p.nameEn}</h3>
-        <p>${isArabic ? p.desc.substring(0, 70)+'...' : p.descEn.substring(0, 70)+'...'}</p>
-      </div>
-    `).join('');
-    document.querySelector('#heroSlider .swiper-wrapper').innerHTML = html;
-    new Swiper('#heroSlider', { loop: true, autoplay: { delay: 4000 }, pagination: { el: '.swiper-pagination' } });
-  }
-
-  // Category Sliders (Men, Women, Unisex)
-  function renderCategorySliders() {
-    const men = products.filter(p => p.cat === 'men').slice(0, 8);
-    const women = products.filter(p => p.cat === 'women').slice(0, 8);
-    const unisex = products.filter(p => p.cat === 'unisex').slice(0, 8);
-    
-    function renderSlider(containerId, items) {
-      const html = items.map(p => `
-        <div class="swiper-slide" data-id="${p.id}">
-          <img src="${p.img}" alt="${p.name}">
-          <div style="font-weight:700;">${isArabic ? p.name : p.nameEn}</div>
-          <div style="color:var(--gold);">${p.price50} ج.م</div>
-        </div>
-      `).join('');
-      document.querySelector(`#${containerId} .swiper-wrapper`).innerHTML = html;
-      new Swiper(`#${containerId}`, { slidesPerView: 2, spaceBetween: 20, breakpoints: { 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }, pagination: { el: '.swiper-pagination' } });
-      document.querySelectorAll(`#${containerId} .swiper-slide`).forEach(slide => slide.addEventListener('click', () => showProductModal(parseInt(slide.dataset.id))));
-    }
-    renderSlider('sliderMen', men);
-    renderSlider('sliderWomen', women);
-    renderSlider('sliderUnisex', unisex);
-  }
-
-  // Trend Section with ranks
-  function renderTrend() {
-    const trendProducts = products.filter(p => p.trend).sort((a,b) => a.rank - b.rank).slice(0, 8);
-    document.getElementById('trendGrid').innerHTML = trendProducts.map(p => `
-      <div class="trend-item" data-id="${p.id}">
-        <div class="trend-rank">#${p.rank}</div>
-        <img src="${p.img}" alt="${p.name}">
-        <div class="product-title" style="margin-top:10px;">${isArabic ? p.name : p.nameEn}</div>
-        <div class="product-price">${p.price50} ج.م</div>
-      </div>
-    `).join('');
-    document.querySelectorAll('.trend-item').forEach(el => el.addEventListener('click', () => showProductModal(parseInt(el.dataset.id))));
-  }
-
-  // Filter products
-  function filterProductsList() {
-    return products.filter(p => 
+  function filterProducts() {
+    return products.filter(p =>
       (currentMain === 'all' || p.cat === currentMain) &&
       (currentSub === 'all' || p.types.includes(currentSub)) &&
-      (searchTerm === '' || (isArabic ? p.name : p.nameEn).includes(searchTerm) || p.desc.includes(searchTerm))
+      (searchTerm === '' || (isArabic ? p.name : p.nameEn).includes(searchTerm))
     );
   }
 
-  // Render main products grid
   function renderProducts() {
-    const filtered = filterProductsList();
+    const filtered = filterProducts();
     const men = filtered.filter(p => p.cat === 'men');
     const women = filtered.filter(p => p.cat === 'women');
     const unisex = filtered.filter(p => p.cat === 'unisex');
     const html = `
-      <div class="main-category"><div class="category-title"><i class="fas fa-user"></i> ${isArabic ? 'عطور رجالية' : 'Men Perfumes'}</div><div class="products-grid">${renderProductCards(men)}</div></div>
-      <div class="main-category"><div class="category-title"><i class="fas fa-venus"></i> ${isArabic ? 'عطور نسائية' : 'Women Perfumes'}</div><div class="products-grid">${renderProductCards(women)}</div></div>
-      <div class="main-category"><div class="category-title"><i class="fas fa-venus-mars"></i> ${isArabic ? 'عطور للجنسين' : 'Unisex Perfumes'}</div><div class="products-grid">${renderProductCards(unisex)}</div></div>
+      <div class="category-section"><div class="category-title"><i class="fas fa-user"></i> ${isArabic ? 'عطور رجالية' : 'Men'}</div><div class="products-grid">${renderCards(men)}</div></div>
+      <div class="category-section"><div class="category-title"><i class="fas fa-venus"></i> ${isArabic ? 'عطور نسائية' : 'Women'}</div><div class="products-grid">${renderCards(women)}</div></div>
+      <div class="category-section"><div class="category-title"><i class="fas fa-venus-mars"></i> ${isArabic ? 'عطور للجنسين' : 'Unisex'}</div><div class="products-grid">${renderCards(unisex)}</div></div>
     `;
-    document.getElementById('mainContent').innerHTML = html;
+    document.getElementById('productsMain').innerHTML = html;
     document.querySelectorAll('.product-card').forEach(card => card.addEventListener('click', () => showProductModal(parseInt(card.dataset.id))));
   }
 
-  function renderProductCards(productsList) {
-    return productsList.map(p => `
+  function renderCards(list) {
+    return list.map(p => `
       <div class="product-card" data-id="${p.id}">
         <div class="product-img"><img src="${p.img}" alt="${p.name}"></div>
         <div class="product-info">
           <div class="product-title">${isArabic ? p.name : p.nameEn}</div>
           <div class="product-price">${p.price50} ج.م</div>
-          <div class="product-badges">${p.types.slice(0,2).map(t => `<span class="badge-tag">${isArabic ? getTypeNameAr(t) : getTypeNameEn(t)}</span>`).join('')}</div>
+          <div class="badges">${p.types.slice(0,2).map(t => `<span class="badge">${getTypeName(t)}</span>`).join('')}</div>
         </div>
       </div>
     `).join('');
   }
 
-  function getTypeNameAr(t) { const names = { floral:"زهري", oud:"عود", musk:"مسك", spicy:"توابل", fruity:"فاكهي", aquatic:"بحري", oriental:"شرقي", leather:"جلدي", woody:"خشبي", gourmand:"حلوى" }; return names[t] || t; }
-  function getTypeNameEn(t) { const names = { floral:"Floral", oud:"Oud", musk:"Musk", spicy:"Spicy", fruity:"Fruity", aquatic:"Aquatic", oriental:"Oriental", leather:"Leather", woody:"Woody", gourmand:"Gourmand" }; return names[t] || t; }
+  function getTypeName(t) {
+    const names = { floral:"زهري", oud:"عود", musk:"مسك", spicy:"توابل", fruity:"فاكهي", aquatic:"بحري", oriental:"شرقي", leather:"جلدي", woody:"خشبي", gourmand:"حلوى" };
+    return isArabic ? names[t] : t.toUpperCase();
+  }
 
-  // Modal Logic
-  let currentProduct = null, currentSize = "50ml", currentQty = 1;
+  // Modal
   function showProductModal(id) {
     currentProduct = products.find(p => p.id === id);
     currentSize = "50ml";
     currentQty = 1;
-    updateModalContent();
+    updateModal();
     document.getElementById('productModal').classList.add('open');
   }
-  function updateModalContent() {
-    if (!currentProduct) return;
+  function updateModal() {
+    if(!currentProduct) return;
     const price = currentSize === "50ml" ? currentProduct.price50 : currentProduct.price100;
     document.getElementById('modalDynamicContent').innerHTML = `
-      <div style="text-align:center;"><img src="${currentProduct.img}" style="width:150px; border-radius:24px; margin-bottom:20px;"></div>
-      <div style="font-size:1.6rem; font-weight:800;">${isArabic ? currentProduct.name : currentProduct.nameEn}</div>
+      <div style="text-align:center;"><img src="${currentProduct.img}" style="width:140px; border-radius:20px;"></div>
+      <div style="font-size:1.6rem; font-weight:800; margin-top:15px;">${isArabic ? currentProduct.name : currentProduct.nameEn}</div>
       <div style="margin:15px 0; line-height:1.6;">${isArabic ? currentProduct.desc : currentProduct.descEn}</div>
-      <div class="size-selector">
-        <div class="size-opt ${currentSize === '50ml' ? 'active' : ''}" data-size="50ml">50 مل - ${currentProduct.price50} ج.م</div>
-        <div class="size-opt ${currentSize === '100ml' ? 'active' : ''}" data-size="100ml">100 مل - ${currentProduct.price100} ج.م</div>
-      </div>
-      <div class="qty-control">
-        <button class="qty-btn" id="modalQtyMinus">-</button>
-        <span style="font-size:1.2rem; min-width:40px; text-align:center;">${currentQty}</span>
-        <button class="qty-btn" id="modalQtyPlus">+</button>
-        <span style="margin-right:auto;">${isArabic ? 'الكمية' : 'Quantity'}</span>
-      </div>
+      <div class="size-selector"><div class="size-opt ${currentSize === '50ml' ? 'active' : ''}" data-size="50ml">50 مل - ${currentProduct.price50} ج.م</div><div class="size-opt ${currentSize === '100ml' ? 'active' : ''}" data-size="100ml">100 مل - ${currentProduct.price100} ج.م</div></div>
+      <div class="qty-control"><button class="qty-btn" id="modalQtyMinus">-</button><span style="min-width:40px; text-align:center;">${currentQty}</span><button class="qty-btn" id="modalQtyPlus">+</button><span style="margin-right:auto;">${isArabic ? 'الكمية' : 'Quantity'}</span></div>
       <div style="font-size:1.6rem; font-weight:800; margin:15px 0;">${price * currentQty} ج.م</div>
-      <button class="add-to-cart-modal" id="modalAddCartBtn" style="background:var(--gold); width:100%; padding:14px; border:none; border-radius:60px; font-weight:bold;">${isArabic ? 'أضف إلى السلة' : 'Add to Cart'}</button>
+      <button class="add-cart-btn" id="modalAddCartBtn">${isArabic ? 'أضف إلى السلة' : 'Add to Cart'}</button>
     `;
-    document.querySelectorAll('.size-opt').forEach(opt => opt.addEventListener('click', (e) => { currentSize = opt.dataset.size; updateModalContent(); }));
-    document.getElementById('modalQtyMinus')?.addEventListener('click', () => { if(currentQty>1) currentQty--; updateModalContent(); });
-    document.getElementById('modalQtyPlus')?.addEventListener('click', () => { currentQty++; updateModalContent(); });
+    document.querySelectorAll('.size-opt').forEach(opt => opt.addEventListener('click', (e) => { currentSize = opt.dataset.size; updateModal(); }));
+    document.getElementById('modalQtyMinus')?.addEventListener('click', () => { if(currentQty>1) currentQty--; updateModal(); });
+    document.getElementById('modalQtyPlus')?.addEventListener('click', () => { currentQty++; updateModal(); });
     document.getElementById('modalAddCartBtn')?.addEventListener('click', () => { addToCart(currentProduct.id, `${isArabic ? currentProduct.name : currentProduct.nameEn} (${currentSize})`, price, currentSize, currentQty); document.getElementById('productModal').classList.remove('open'); });
   }
 
-  // Cart Functions - allows multiple sizes of same product
+  // Cart
   function addToCart(id, name, price, size, qty) {
     const idx = cart.findIndex(i => i.id === id && i.size === size);
-    if (idx !== -1) cart[idx].quantity += qty;
+    if(idx !== -1) cart[idx].quantity += qty;
     else cart.push({ id, name, price, quantity: qty, size });
     updateCartUI();
-    showNotification(`${isArabic ? 'تم إضافة' : 'Added'} ${name}`);
+    showNotif(`✅ ${isArabic ? 'تم إضافة' : 'Added'} ${name}`);
   }
   function updateCartUI() {
     const totalQty = cart.reduce((s,i) => s + i.quantity, 0);
     const totalPrice = cart.reduce((s,i) => s + i.price * i.quantity, 0);
     document.getElementById('cartCount').innerText = totalQty;
     document.getElementById('cartTotal').innerHTML = totalPrice + ' ج.م';
-    if (cart.length === 0) { document.getElementById('cartItemsList').innerHTML = `<div style="text-align:center;">${isArabic ? 'سلة فارغة' : 'Cart is empty'}</div>`; return; }
+    if(cart.length === 0) { document.getElementById('cartItemsList').innerHTML = `<div style="text-align:center;">${isArabic ? 'سلة فارغة' : 'Cart empty'}</div>`; return; }
     document.getElementById('cartItemsList').innerHTML = cart.map((item, idx) => `
-      <div style="display:flex; justify-content:space-between; margin-bottom:15px; padding-bottom:8px; border-bottom:1px solid var(--beige);">
+      <div style="display:flex; justify-content:space-between; margin-bottom:15px; border-bottom:1px solid #E2D5C3; padding-bottom:10px;">
         <div><strong>${item.name}</strong><br>${item.price} ج.م × ${item.quantity}</div>
-        <button class="remove-item" data-idx="${idx}" style="background:var(--pink); border:none; border-radius:50%; width:32px; height:32px; cursor:pointer;"><i class="fas fa-trash"></i></button>
+        <button class="remove-item" data-idx="${idx}" style="background:#F0E6DA; border:none; border-radius:50%; width:32px; cursor:pointer;"><i class="fas fa-trash"></i></button>
       </div>
     `).join('');
     document.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', (e) => { cart.splice(parseInt(btn.dataset.idx), 1); updateCartUI(); }));
   }
-  function showNotification(msg) {
-    let notif = document.createElement('div');
-    notif.innerText = msg;
-    notif.style.cssText = 'position:fixed;bottom:20px;right:20px;background:var(--gold);color:var(--brown);padding:12px 24px;border-radius:50px;z-index:1200;font-weight:bold;box-shadow:var(--shadow-md);';
-    document.body.appendChild(notif);
-    setTimeout(() => notif.remove(), 2500);
+  function showNotif(msg) {
+    let d = document.createElement('div');
+    d.innerText = msg;
+    d.style.cssText = 'position:fixed;bottom:20px;right:20px;background:var(--gold);color:#5A3E2B;padding:12px 24px;border-radius:50px;z-index:1200;font-weight:bold;';
+    document.body.appendChild(d);
+    setTimeout(() => d.remove(), 2500);
   }
 
-  // Event Listeners
+  // WhatsApp order: send full cart as plain text (copy-paste ready)
+  document.getElementById('whatsappOrderBtn').addEventListener('click', () => {
+    if(cart.length === 0) { alert(isArabic ? 'السلة فارغة' : 'Cart is empty'); return; }
+    let msg = `🛍️ طلب جديد من SWYR:\n\n`;
+    cart.forEach(i => msg += `▪️ ${i.name}\n   الكمية: ${i.quantity}\n   السعر: ${i.price} ج.م\n   الإجمالي: ${i.price * i.quantity} ج.م\n\n`);
+    msg += `💰 الإجمالي الكلي: ${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ج.م\n\n📦 طرق الدفع: فودافون كاش أو إنستاباي\n📍 سيتم التواصل معك للتأكيد`;
+    window.open(`https://wa.me/201234567890?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+
+  // Events
   document.getElementById('darkModeToggle').addEventListener('click', () => { isDark = !isDark; applyTheme(); });
   document.getElementById('langToggle').addEventListener('click', () => { isArabic = !isArabic; updateLanguage(); });
   document.getElementById('cartIcon').addEventListener('click', () => document.getElementById('cartDrawer').classList.add('open'));
   document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartDrawer').classList.remove('open'));
   document.getElementById('closeModalBtn').addEventListener('click', () => document.getElementById('productModal').classList.remove('open'));
   document.getElementById('productModal').addEventListener('click', (e) => { if(e.target === document.getElementById('productModal')) document.getElementById('productModal').classList.remove('open'); });
-  document.getElementById('whatsappOrderBtn').addEventListener('click', () => {
-    if(cart.length === 0) { alert(isArabic ? 'السلة فارغة' : 'Cart is empty'); return; }
-    let msg = `${isArabic ? 'طلب جديد من SWYR:' : 'New order from SWYR:'}\n`;
-    cart.forEach(i => msg += `- ${i.name} × ${i.quantity} = ${i.price * i.quantity} ج.م\n`);
-    msg += `${isArabic ? 'الإجمالي:' : 'Total:'} ${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ج.م\n${isArabic ? 'طرق الدفع: فودافون كاش أو إنستاباي' : 'Payment: Vodafone Cash or InstaPay'}`;
-    window.open(`https://wa.me/201234567890?text=${encodeURIComponent(msg)}`, '_blank');
-  });
   document.getElementById('searchInput').addEventListener('input', (e) => { searchTerm = e.target.value; renderProducts(); });
   document.querySelectorAll('#mainCatFilters .filter-btn').forEach(btn => btn.addEventListener('click', (e) => {
     document.querySelectorAll('#mainCatFilters .filter-btn').forEach(b => b.classList.remove('active'));
@@ -922,24 +618,20 @@
     currentSub = btn.dataset.sub;
     renderProducts();
   }));
+  document.addEventListener('click', (e) => {
+    const drawer = document.getElementById('cartDrawer');
+    const icon = document.getElementById('cartIcon');
+    if(drawer.classList.contains('open') && !drawer.contains(e.target) && !icon.contains(e.target)) drawer.classList.remove('open');
+  });
   window.addEventListener('scroll', () => document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 300));
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Close cart when clicking outside
-  document.addEventListener('click', (e) => {
-    const cart = document.getElementById('cartDrawer');
-    const cartIcon = document.getElementById('cartIcon');
-    if (cart.classList.contains('open') && !cart.contains(e.target) && !cartIcon.contains(e.target)) {
-      cart.classList.remove('open');
-    }
-  });
+  // Set data-ar/data-en for filter buttons
+  document.querySelectorAll('#mainCatFilters .filter-btn').forEach(btn => { btn.setAttribute('data-ar', btn.innerText); if(btn.dataset.main==='all') btn.setAttribute('data-en','All'); if(btn.dataset.main==='men') btn.setAttribute('data-en','Men'); if(btn.dataset.main==='women') btn.setAttribute('data-en','Women'); if(btn.dataset.main==='unisex') btn.setAttribute('data-en','Unisex'); });
+  document.querySelectorAll('#subCatFilters .filter-btn').forEach(btn => { btn.setAttribute('data-ar', btn.innerText); if(btn.dataset.sub==='all') btn.setAttribute('data-en','All'); else btn.setAttribute('data-en',btn.innerText.replace('زهري','Floral').replace('عود','Oud').replace('مسك','Musk').replace('توابل','Spicy').replace('فاكهي','Fruity').replace('بحري','Aquatic').replace('شرقي','Oriental').replace('جلدي','Leather').replace('خشبي','Woody')); });
 
-  // Initialization
   applyTheme();
   updateLanguage();
-  renderHeroSlider();
-  renderCategorySliders();
-  renderTrend();
   renderProducts();
   updateCartUI();
 </script>
