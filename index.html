@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>SWYR | عطرك .. هويتك - عطور فاخرة مستوحاة</title>
-  <meta name="description" content="SWYR عطور فاخرة مستوحاة من أرقى البيوت العالمية. اكتشف عطرك المثالي من تشكيلة تضم العود، المسك، الزهور. توصيل سريع.">
+  <title>SWYR | عطرك .. هويتك - أرقى العطور الفاخرة</title>
+  <meta name="description" content="SWYR: عطور فاخرة مستوحاة من أرقى البيوت العالمية. اكتشف عطرك المثالي من تشكيلة تضم العود، المسك، الزهور، والتوابل.">
   <meta name="keywords" content="SWYR, سوير, عطر فاخر, عود, مسك, عطور نسائية, عطور رجالية">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <style>
-    /* SWYR Colors Only */
+    /* SWYR Colors Only - No emojis, clean design */
     :root {
       --gold-dark: #efb710;
       --gold-light: #f7df92;
@@ -39,7 +39,7 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--pink); border-radius: 10px; }
     ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 10px; }
-    .container { max-width: 1300px; margin: 0 auto; padding: 0 28px; }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 28px; }
     
     /* Header */
     .header {
@@ -101,7 +101,7 @@
       color: var(--brown);
       transition: all 0.3s;
     }
-    .icon-btn:hover { transform: scale(1.03); background: var(--gold-light); color: var(--brown); }
+    .icon-btn:hover { transform: scale(1.03); background: var(--gold-light); }
     .lang-btn {
       background: var(--white);
       padding: 8px 18px;
@@ -110,7 +110,9 @@
       font-weight: bold;
       border: 1px solid var(--pink);
       font-family: inherit;
+      transition: 0.3s;
     }
+    .lang-btn:hover { background: var(--gold-light); }
     .cart-icon { position: relative; }
     .cart-count {
       position: absolute;
@@ -128,11 +130,11 @@
       font-weight: bold;
     }
     
-    /* Hero */
+    /* Hero Section */
     .hero {
       background: linear-gradient(125deg, var(--pink)15, var(--gold-light)20, var(--bg-light)70);
       border-radius: 48px;
-      margin: 40px 0;
+      margin: 40px 0 50px;
       padding: 70px 40px;
       text-align: center;
     }
@@ -158,12 +160,44 @@
     }
     .hero .btn-cta:hover { background: var(--gold-dark); color: var(--brown); }
     
+    /* Trend Section - Most Sold Worldwide */
+    .trend-section {
+      margin: 60px 0;
+      padding: 40px;
+      background: var(--white);
+      border-radius: 48px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--beige);
+    }
+    .trend-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .trend-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .trend-card {
+      background: var(--bg-light);
+      border-radius: 24px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .trend-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .trend-card svg { width: 80px; height: 80px; margin-bottom: 15px; }
+    .trend-card h4 { font-size: 1.1rem; font-weight: 800; margin-bottom: 5px; }
+    
     /* Quick Nav */
     .quick-nav {
       display: flex;
       justify-content: center;
       gap: 15px;
-      margin: 30px 0;
+      margin: 30px 0 50px;
       flex-wrap: wrap;
     }
     .quick-nav a {
@@ -178,9 +212,9 @@
     }
     .quick-nav a:hover { background: var(--gold-light); border-color: var(--gold-dark); }
     
-    /* Main Categories (Men/Women/Unisex) */
+    /* Main Categories */
     .main-category {
-      margin: 50px 0 30px;
+      margin: 50px 0 40px;
     }
     .category-title {
       font-size: 1.8rem;
@@ -200,12 +234,12 @@
       border-radius: 3px;
     }
     
-    /* Sub Filters (10+ Types) */
+    /* Sub Filters (10+ types) */
     .sub-filters {
-      margin: 20px 0 30px;
+      margin: 15px 0 25px;
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
     .filter-btn {
       background: transparent;
@@ -268,7 +302,7 @@
     .product-title { font-size: 1.2rem; font-weight: 800; margin-bottom: 5px; }
     .product-price { font-size: 1.1rem; font-weight: 700; color: var(--gold-dark); margin: 10px 0; }
     
-    /* Modal */
+    /* Modal Product Detail */
     .modal {
       position: fixed;
       top: 0;
@@ -343,7 +377,9 @@
       font-size: 1rem;
       margin-top: 20px;
       cursor: pointer;
+      transition: 0.3s;
     }
+    .add-to-cart-modal:hover { background: var(--gold-dark); color: var(--brown); }
     
     /* Cart Drawer */
     .cart-drawer {
@@ -373,7 +409,9 @@
       font-weight: bold;
       margin-top: 12px;
       cursor: pointer;
+      transition: 0.3s;
     }
+    .whatsapp-btn:hover { opacity: 0.9; }
     
     /* Scroll Top */
     .scroll-top {
@@ -434,13 +472,18 @@
     <button class="btn-cta" id="scrollToProducts"><i class="fas fa-arrow-down"></i> <span id="ctaText">تسوق الآن</span></button>
   </div>
 
-  <div class="quick-nav">
-    <a href="#men">رجالي</a>
-    <a href="#women">نسائي</a>
-    <a href="#unisex">للجنسين</a>
+  <!-- Trend Section: Most Sold Worldwide 2025-2026 -->
+  <div class="trend-section">
+    <div class="trend-title" id="trendTitle">أكثر العطور مبيعاً عالمياً 2026</div>
+    <div class="trend-grid" id="trendGrid"></div>
   </div>
 
-  <!-- Main Categories will be injected by JS -->
+  <div class="quick-nav">
+    <a href="#men" id="navMen">رجالي</a>
+    <a href="#women" id="navWomen">نسائي</a>
+    <a href="#unisex" id="navUnisex">للجنسين</a>
+  </div>
+
   <div id="mainContent"></div>
 </div>
 
@@ -470,7 +513,7 @@
 <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
 
 <script>
-  // 30 Real Perfumes with accurate descriptions
+  // ======================== PRODUCTS DATABASE (30 Real Perfumes) ========================
   const products = [
     { id:1, name:"Sauvage Dior", nameAr:"سافاج ديور", cat:"men", types:["spicy","aquatic"], price50:350, price100:600, desc:"عطر جريء مستوحى من الصحراء. مزيج من البرغموت، فلفل سيشوان، وخشب الأرز. يدوم طويلاً ويعطي ثقة لا توصف.", descEn:"Bold scent inspired by the desert. Blend of bergamot, Sichuan pepper, and cedarwood." },
     { id:2, name:"J'adore Dior", nameAr:"جادور ديور", cat:"women", types:["floral","fruity"], price50:360, price100:650, desc:"أنوثة متألقة بمزيج من الياسمين، الورد، وزهر البرتقال. عطر زهري ناعم يدوم طوال اليوم.", descEn:"Radiant femininity with jasmine, rose, and orange blossom." },
@@ -504,17 +547,40 @@
     { id:30, name:"Chance", nameAr:"شانس", cat:"women", types:["floral","citrus"], price50:350, price100:640, desc:"عطر الحظ مع الجريب فروت، الياسمين، والمسك. عطر منعش وجذاب.", descEn:"Lucky scent with grapefruit, jasmine, and musk." }
   ];
 
-  // Sub filters mapping
+  // Trending products (most sold worldwide 2026)
+  const trending = products.filter(p => [1,2,3,4,5,6,7,8].includes(p.id));
+
+  // Type names mapping
   const typeNames = { floral:"زهري", oud:"عود", musk:"مسك", spicy:"توابل", fruity:"فاكهي", aquatic:"بحري", oriental:"شرقي", leather:"جلدي", woody:"خشبي", gourmand:"حلوى", aromatic:"عطري", citrus:"حمضيات", dark:"داكن" };
-  
+
+  // State
   let cart = [], isDark = false, isArabic = true, searchTerm = "", currentMainCat = "all", currentSubFilter = "all";
   
-  function applyTheme() { document.body.classList.toggle('dark', isDark); localStorage.setItem('swyr_dark', isDark); }
-  function toggleLang() { isArabic = !isArabic; updateUI(); renderFullSite(); }
+  // Helper functions
+  function savePrefs() { localStorage.setItem('swyr_dark', isDark); localStorage.setItem('swyr_lang', isArabic); }
+  function loadPrefs() { isDark = localStorage.getItem('swyr_dark') === 'true'; isArabic = localStorage.getItem('swyr_lang') === 'true'; applyTheme(); updateUI(); }
+  function applyTheme() { document.body.classList.toggle('dark', isDark); savePrefs(); }
+  function toggleLang() { isArabic = !isArabic; savePrefs(); updateUI(); renderFullSite(); renderTrending(); }
   function updateUI() {
     document.getElementById('heroTitle').innerText = isArabic ? "عطرك .. هويتك" : "Your Scent.. Your Identity";
     document.getElementById('heroDesc').innerHTML = isArabic ? "ليست مجرد عطور، بل تجربة حسية تعكس شخصيتك." : "Not just perfumes, but a sensory experience reflecting your personality.";
     document.getElementById('ctaText').innerText = isArabic ? "تسوق الآن" : "Shop Now";
+    document.getElementById('trendTitle').innerText = isArabic ? "أكثر العطور مبيعاً عالمياً 2026" : "Best Selling Perfumes Worldwide 2026";
+    document.getElementById('navMen').innerText = isArabic ? "رجالي" : "Men";
+    document.getElementById('navWomen').innerText = isArabic ? "نسائي" : "Women";
+    document.getElementById('navUnisex').innerText = isArabic ? "للجنسين" : "Unisex";
+  }
+  
+  function renderTrending() {
+    const grid = document.getElementById('trendGrid');
+    grid.innerHTML = trending.map(p => `
+      <div class="trend-card" data-id="${p.id}">
+        <svg viewBox="0 0 100 100"><rect x="25" y="28" width="50" height="52" rx="12" fill="var(--pink)" stroke="var(--gold-dark)" stroke-width="1.5"/><rect x="35" y="18" width="30" height="15" rx="6" fill="var(--gold-light)"/><circle cx="50" cy="60" r="9" fill="var(--brown)"/></svg>
+        <h4>${isArabic ? p.nameAr : p.name}</h4>
+        <p>${p.price50} ج.م</p>
+      </div>
+    `).join('');
+    document.querySelectorAll('.trend-card').forEach(card => card.addEventListener('click', () => showProductModal(parseInt(card.dataset.id))));
   }
   
   function renderFullSite() {
@@ -523,29 +589,42 @@
       (currentSubFilter === 'all' || p.types.includes(currentSubFilter)) &&
       (searchTerm === '' || (isArabic ? p.nameAr : p.name).includes(searchTerm) || p.desc.includes(searchTerm))
     );
-    
     let menProducts = filtered.filter(p => p.cat === 'men');
     let womenProducts = filtered.filter(p => p.cat === 'women');
     let unisexProducts = filtered.filter(p => p.cat === 'unisex');
     
     const html = `
       <div id="men" class="main-category">
-        <div class="category-title">${isArabic ? '👔 عطور رجالية' : '👔 Men Perfumes'}</div>
+        <div class="category-title">${isArabic ? 'عطور رجالية' : 'Men Perfumes'}</div>
         <div class="sub-filters" data-cat="men"></div>
         <div class="products-grid" data-cat="men">${renderProductsHTML(menProducts)}</div>
       </div>
       <div id="women" class="main-category">
-        <div class="category-title">${isArabic ? '💄 عطور نسائية' : '💄 Women Perfumes'}</div>
+        <div class="category-title">${isArabic ? 'عطور نسائية' : 'Women Perfumes'}</div>
         <div class="sub-filters" data-cat="women"></div>
         <div class="products-grid" data-cat="women">${renderProductsHTML(womenProducts)}</div>
       </div>
       <div id="unisex" class="main-category">
-        <div class="category-title">${isArabic ? '🔄 عطور للجنسين' : '🔄 Unisex Perfumes'}</div>
+        <div class="category-title">${isArabic ? 'عطور للجنسين' : 'Unisex Perfumes'}</div>
         <div class="sub-filters" data-cat="unisex"></div>
         <div class="products-grid" data-cat="unisex">${renderProductsHTML(unisexProducts)}</div>
       </div>
     `;
     document.getElementById('mainContent').innerHTML = html;
+    
+    // Attach filter buttons for each category
+    document.querySelectorAll('.sub-filters').forEach(container => {
+      const cat = container.dataset.cat;
+      const typesAll = [...new Set(products.filter(p => p.cat === cat).flatMap(p => p.types))];
+      container.innerHTML = `<button class="filter-btn ${currentSubFilter === 'all' ? 'active' : ''}" data-filter="all">${isArabic ? 'الكل' : 'All'}</button>` +
+        typesAll.map(t => `<button class="filter-btn ${currentSubFilter === t ? 'active' : ''}" data-filter="${t}">${typeNames[t]}</button>`).join('');
+      container.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          currentSubFilter = btn.dataset.filter;
+          renderFullSite();
+        });
+      });
+    });
     
     // Attach product click events
     document.querySelectorAll('.product-card').forEach(card => card.addEventListener('click', () => showProductModal(parseInt(card.dataset.id))));
@@ -600,6 +679,7 @@
     document.getElementById('modalAddCartBtn')?.addEventListener('click', () => { addToCart(currentProduct.id, `${isArabic ? currentProduct.nameAr : currentProduct.name} (${currentSize})`, price, currentSize, currentQty); document.getElementById('productModal').classList.remove('open'); });
   }
   
+  // Cart functions
   function addToCart(id, name, price, size, qty) {
     let idx = cart.findIndex(i => i.id === id && i.size === size);
     if (idx !== -1) cart[idx].quantity += qty;
@@ -636,10 +716,10 @@
   document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartDrawer').classList.remove('open'));
   document.getElementById('closeModalBtn').addEventListener('click', () => document.getElementById('productModal').classList.remove('open'));
   document.getElementById('whatsappOrderBtn').addEventListener('click', () => {
-    if(cart.length === 0) { alert('السلة فارغة'); return; }
-    let msg = `طلب جديد من SWYR:\n`;
-    cart.forEach(i => msg += `- ${i.name} × ${i.quantity} = ${i.price * i.quantity} ج.م\n`);
-    msg += `الإجمالي: ${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ج.م`;
+    if(cart.length === 0) { alert(isArabic ? 'السلة فارغة' : 'Cart is empty'); return; }
+    let msg = `${isArabic ? 'طلب جديد من SWYR:' : 'New order from SWYR:'}\n`;
+    cart.forEach(i => msg += `- ${i.name} × ${i.quantity} = ${i.price * i.quantity} ${isArabic ? 'ج.م' : 'EGP'}\n`);
+    msg += `${isArabic ? 'الإجمالي: ' : 'Total: '}${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ${isArabic ? 'ج.م' : 'EGP'}`;
     window.open(`https://wa.me/201234567890?text=${encodeURIComponent(msg)}`, '_blank');
   });
   document.getElementById('searchInput').addEventListener('input', (e) => { searchTerm = e.target.value; renderFullSite(); });
@@ -647,7 +727,20 @@
   window.addEventListener('scroll', () => document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 300));
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   
-  applyTheme(); renderFullSite(); updateCartUI();
+  // Close cart when clicking outside
+  document.addEventListener('click', (e) => {
+    const cartDrawer = document.getElementById('cartDrawer');
+    const cartIcon = document.getElementById('cartIcon');
+    if (!cartDrawer.contains(e.target) && !cartIcon.contains(e.target) && cartDrawer.classList.contains('open')) {
+      cartDrawer.classList.remove('open');
+    }
+  });
+  
+  // Initialize
+  loadPrefs();
+  renderFullSite();
+  renderTrending();
+  updateCartUI();
 </script>
 </body>
 </html>
