@@ -3,74 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>SWYR | لمسة من الفخامة الخالصة</title>
+  <title>SWYR | لمسة من الفخامة الخالصة - عطور فاخرة</title>
   
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="SWYR عطور فاخرة مستوحاة من أرقى البيوت العالمية. تجربة حسية فريدة تجمع بين الأصالة والحداثة. اكتشف هويتك العطرية.">
-  <meta name="keywords" content="SWYR, سوير, عطر فاخر, عطور مستوحاة, عطر نسائي, عطر رجالي, أون لاين">
+  <!-- SEO محسن جداً -->
+  <meta name="description" content="SWYR: عطور فاخرة مستوحاة من أرقى البيوت العالمية. اكتشف عطرك المثالي مع تشكيلة مميزة من العطور النسائية والرجالية. توصيل سريع ودفع آمن.">
+  <meta name="keywords" content="SWYR, سوير, عطر فاخر, عطور مستوحاة, عطر نسائي, عطر رجالي, أون لاين, عطر أنيق">
+  <meta name="author" content="SWYR">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="SWYR - لمسة من الفخامة الخالصة">
-  <meta property="og:description" content="عطور تجمع بين الأناقة والجودة. أسرع إلى تجربة فريدة.">
+  <meta property="og:description" content="عطور تجمع بين الأناقة والجودة. أسرع إلى تجربة فريدة تعكس هويتك.">
+  <meta property="og:url" content="https://swyr.almatjar.store">
+  <meta name="twitter:card" content="summary_large_image">
   
-  <!-- Fonts & Icons -->
+  <!-- Structured Data for Rich Results -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SWYR",
+      "url": "https://swyr.almatjar.store",
+      "logo": "https://swyr.almatjar.store/logo.png",
+      "description": "علامة تجارية متخصصة في العطور الفاخرة المستوحاة",
+      "sameAs": [
+        "https://www.instagram.com/swyrbeauty/",
+        "https://www.tiktok.com/@swyrperfumes",
+        "https://www.facebook.com/people/SWYR/61563925810810/",
+        "https://www.linkedin.com/company/swyr-perfumes/"
+      ]
+    }
+  </script>
+  
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%235d4545'/%3E%3Ccircle cx='50' cy='50' r='35' fill='%23ffb3db'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%23f7df92'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23C6A43F'/%3E%3Ccircle cx='50' cy='50' r='35' fill='%23D4A5A5'/%3E%3Ccircle cx='50' cy='50' r='20' fill='%234A3525'/%3E%3C/svg%3E">
   
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
-      --bg-page: #fef7f2;
-      --bg-card: #ffffff;
-      --text-dark: #2c1810;
-      --text-soft: #5d4545;
-      --gold: #d4af37;
-      --gold-light: #f7df92;
-      --rose: #ffb3db;
-      --rose-dark: #e08eae;
-      --shadow-sm: 0 10px 30px rgba(0,0,0,0.05);
-      --shadow-lg: 0 25px 45px rgba(0,0,0,0.1);
-      --transition: all 0.4s cubic-bezier(0.2, 0.95, 0.4, 1.05);
+      /* Light Mode - ألوان هادئة فاخرة */
+      --bg-body: #FDF9F4;
+      --bg-card: #FFFFFF;
+      --bg-soft: #F5EFE9;
+      --text-primary: #2C221B;
+      --text-secondary: #5C4B3A;
+      --gold: #C6A43F;
+      --gold-dark: #A07E2E;
+      --rose: #D4A5A5;
+      --rose-dark: #B88181;
+      --border: #E8DDD3;
+      --shadow: 0 8px 30px rgba(0,0,0,0.06);
+      --shadow-hover: 0 20px 35px rgba(0,0,0,0.1);
+      --transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
 
     body.dark {
-      --bg-page: #121212;
-      --bg-card: #1e1e2a;
-      --text-dark: #f0e6d8;
-      --text-soft: #ffb3db;
-      --shadow-sm: 0 10px 30px rgba(0,0,0,0.2);
-      --shadow-lg: 0 25px 45px rgba(0,0,0,0.3);
+      --bg-body: #121212;
+      --bg-card: #1E1E24;
+      --bg-soft: #2A2A30;
+      --text-primary: #F0EAD6;
+      --text-secondary: #D6C8B3;
+      --gold: #E6C87A;
+      --gold-dark: #C4A455;
+      --rose: #B88A8A;
+      --rose-dark: #9E6E6E;
+      --border: #33333D;
+      --shadow: 0 8px 30px rgba(0,0,0,0.3);
+      --shadow-hover: 0 20px 40px rgba(0,0,0,0.4);
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Tajawal', sans-serif;
-      background: var(--bg-page);
-      color: var(--text-dark);
+      background: var(--bg-body);
+      color: var(--text-primary);
       transition: var(--transition);
       scroll-behavior: smooth;
+      line-height: 1.5;
     }
 
-    /* custom scroll */
     ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: var(--bg-page); }
-    ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 10px; }
-    ::selection { background: var(--gold-light); color: var(--text-dark); }
+    ::-webkit-scrollbar-track { background: var(--bg-soft); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 8px; }
+    ::selection { background: var(--gold); color: var(--text-primary); }
 
-    .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 28px; }
 
-    /* header */
+    /* Header */
     .header {
-      background: rgba(var(--bg-card-rgb), 0.9);
+      background: rgba(var(--bg-card-rgb, 255,255,255), 0.95);
       backdrop-filter: blur(12px);
       position: sticky;
       top: 0;
       z-index: 100;
       padding: 16px 0;
-      border-bottom: 1px solid rgba(93,69,69,0.1);
+      border-bottom: 1px solid var(--border);
     }
     .header-flex {
       display: flex;
@@ -80,44 +108,41 @@
       gap: 20px;
     }
     .logo h1 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 800;
-      background: linear-gradient(135deg, var(--text-soft), var(--gold), var(--rose));
+      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold-dark));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .logo p { font-size: 0.7rem; letter-spacing: 2px; color: var(--text-soft); }
+    .logo p { font-size: 0.7rem; letter-spacing: 2px; color: var(--gold-dark); }
 
-    .header-actions {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
+    .header-actions { display: flex; gap: 15px; align-items: center; }
     .icon-btn {
       background: var(--bg-card);
-      width: 45px;
-      height: 45px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: var(--transition);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid rgba(255,179,219,0.3);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
     }
-    .icon-btn:hover { transform: scale(1.05); background: var(--rose); color: white; }
+    .icon-btn:hover { transform: scale(1.05); background: var(--gold); color: #fff; border-color: var(--gold); }
     .cart-icon { position: relative; }
     .cart-count {
       position: absolute;
-      top: -5px;
-      right: -5px;
-      background: var(--gold);
-      color: var(--text-dark);
+      top: -6px;
+      right: -6px;
+      background: var(--gold-dark);
+      color: white;
       border-radius: 50%;
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       font-size: 0.7rem;
       display: flex;
       align-items: center;
@@ -125,64 +150,96 @@
       font-weight: bold;
     }
 
-    /* hero */
+    /* Hero */
     .hero {
-      background: linear-gradient(125deg, var(--rose)15, var(--gold-light)15, var(--bg-page)70);
+      background: linear-gradient(125deg, var(--rose)10, var(--gold)08, var(--bg-body)80);
       border-radius: 40px;
       margin: 40px 0;
-      padding: 80px 40px;
+      padding: 70px 40px;
       text-align: center;
     }
-    .hero h2 { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, var(--text-soft), var(--gold)); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 16px; }
-    .hero p { max-width: 600px; margin: 0 auto; color: var(--text-soft); font-size: 1.1rem; }
+    .hero h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), var(--rose-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
 
-    /* products grid */
-    .section-title { font-size: 2rem; margin: 60px 0 30px; font-weight: 700; position: relative; display: inline-block; }
-    .section-title:after { content: ''; position: absolute; bottom: -10px; right: 0; width: 60px; height: 3px; background: var(--gold); border-radius: 3px; }
+    /* Products */
+    .section-title {
+      font-size: 2rem;
+      margin: 60px 0 30px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      right: 0;
+      width: 70px;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 3px;
+    }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 40px;
+      gap: 35px;
       margin: 40px 0;
     }
     .product-card {
       background: var(--bg-card);
-      border-radius: 32px;
+      border-radius: 28px;
       overflow: hidden;
       transition: var(--transition);
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow);
       cursor: pointer;
-      border: 1px solid rgba(255,179,219,0.2);
+      border: 1px solid var(--border);
     }
     .product-card:hover {
-      transform: translateY(-12px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--rose);
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--gold);
     }
     .product-img {
-      height: 280px;
+      height: 270px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(145deg, var(--bg-page), var(--rose)10);
+      background: var(--bg-soft);
       padding: 20px;
     }
-    .product-img img { max-width: 100%; max-height: 100%; transition: transform 0.5s; }
+    .product-img img {
+      max-width: 85%;
+      max-height: 85%;
+      transition: transform 0.5s;
+    }
     .product-card:hover .product-img img { transform: scale(1.02); }
     .product-info { padding: 24px; }
-    .product-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
-    .product-price { font-size: 1.4rem; font-weight: 700; color: var(--gold); margin: 12px 0; direction: ltr; text-align: right; }
-    .product-short-desc { color: var(--text-soft); font-size: 0.85rem; opacity: 0.9; }
+    .product-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); }
+    .product-price { font-size: 1.3rem; font-weight: 700; color: var(--gold); margin: 12px 0; }
+    .product-short-desc { color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* modal product details */
+    /* Modal */
     .modal {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -194,69 +251,72 @@
     .modal.open { visibility: visible; opacity: 1; }
     .modal-content {
       background: var(--bg-card);
-      max-width: 800px;
+      max-width: 750px;
       width: 90%;
       max-height: 85vh;
       overflow-y: auto;
-      border-radius: 48px;
+      border-radius: 40px;
       padding: 32px;
       position: relative;
-      direction: rtl;
+      border: 1px solid var(--gold);
     }
     .close-modal {
       position: sticky;
       top: 0;
       left: 100%;
-      background: var(--rose);
       width: 40px;
       height: 40px;
+      background: var(--bg-soft);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       float: left;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     .modal-img { text-align: center; margin-bottom: 20px; }
-    .modal-img img { max-width: 200px; border-radius: 24px; }
-    .modal-title { font-size: 2rem; font-weight: 800; margin-bottom: 10px; }
-    .modal-price { font-size: 1.8rem; color: var(--gold); margin: 15px 0; }
-    .full-description { line-height: 1.8; margin: 20px 0; color: var(--text-soft); }
-    .size-selector { display: flex; gap: 15px; margin: 25px 0; }
+    .modal-img img { max-width: 180px; border-radius: 24px; }
+    .modal-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 10px; }
+    .modal-price { font-size: 1.6rem; color: var(--gold); margin: 15px 0; }
+    .full-description { line-height: 1.8; margin: 20px 0; color: var(--text-secondary); }
+    .size-selector { display: flex; gap: 15px; margin: 25px 0; flex-wrap: wrap; }
     .size-opt {
       padding: 10px 25px;
       border-radius: 50px;
-      background: var(--bg-page);
-      border: 1px solid var(--rose);
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
       cursor: pointer;
       transition: 0.2s;
     }
-    .size-opt.active { background: var(--gold); color: var(--text-dark); border-color: var(--gold); }
+    .size-opt.active { background: var(--gold); color: #fff; border-color: var(--gold); }
     .qty-control { display: flex; align-items: center; gap: 20px; margin: 25px 0; }
     .qty-btn {
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: var(--rose);
-      border: none;
-      font-size: 1.5rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      font-size: 1.4rem;
       cursor: pointer;
+      transition: 0.2s;
     }
+    .qty-btn:hover { background: var(--gold); color: white; }
     .add-to-cart-modal {
-      background: linear-gradient(95deg, var(--text-soft), var(--gold));
+      background: var(--gold);
       width: 100%;
       padding: 16px;
       border: none;
       border-radius: 60px;
-      color: white;
+      color: var(--text-primary);
       font-weight: bold;
       font-size: 1.1rem;
       cursor: pointer;
       transition: 0.2s;
     }
+    .add-to-cart-modal:hover { background: var(--gold-dark); color: white; }
 
-    /* cart drawer */
+    /* Cart Drawer */
     .cart-drawer {
       position: fixed;
       top: 0;
@@ -268,14 +328,14 @@
       transition: left 0.3s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: -8px 0 30px rgba(0,0,0,0.2);
+      box-shadow: -5px 0 30px rgba(0,0,0,0.2);
     }
     .cart-drawer.open { left: 0; }
-    .cart-header { padding: 24px; border-bottom: 1px solid var(--rose); display: flex; justify-content: space-between; font-weight: 800; }
+    .cart-header { padding: 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; font-weight: 800; }
     .cart-items { flex: 1; overflow: auto; padding: 20px; }
-    .cart-footer { padding: 24px; border-top: 1px solid var(--rose); }
+    .cart-footer { padding: 24px; border-top: 1px solid var(--border); }
     .payment-icons { display: flex; gap: 12px; margin: 15px 0; flex-wrap: wrap; }
-    .payment-icons span { background: var(--bg-page); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; }
+    .payment-icons span { background: var(--bg-soft); padding: 8px 20px; border-radius: 50px; font-size: 0.85rem; }
     .whatsapp-btn {
       background: #25D366;
       width: 100%;
@@ -292,15 +352,15 @@
       gap: 10px;
     }
 
-    /* footer */
+    /* Footer */
     footer {
       text-align: center;
       padding: 50px 20px 30px;
-      border-top: 1px solid var(--rose);
-      margin-top: 80px;
+      border-top: 1px solid var(--border);
+      margin-top: 70px;
     }
     .social-links { display: flex; justify-content: center; gap: 28px; margin-bottom: 25px; }
-    .social-link { font-size: 1.6rem; color: var(--text-soft); transition: 0.2s; }
+    .social-link { font-size: 1.6rem; color: var(--text-secondary); transition: 0.2s; }
     .social-link:hover { transform: translateY(-4px); color: var(--gold); }
 
     .scroll-top {
@@ -318,8 +378,10 @@
       opacity: 0;
       transition: 0.2s;
       z-index: 99;
+      box-shadow: var(--shadow);
     }
     .scroll-top.show { opacity: 1; }
+    .scroll-top:hover { background: var(--gold-dark); transform: translateY(-3px); }
 
     @media (max-width: 700px) {
       .hero h2 { font-size: 2rem; }
@@ -346,7 +408,7 @@
 <div class="container">
   <div class="hero">
     <h2>عطرك .. هويتك</h2>
-    <p>ليست مجرد عطور، بل تجربة حسية تأخذك إلى عالم من الأناقة والثقة. مستوحاة من أرقى البيوت العالمية، نقدم لكِ عطراً يعكس شخصيتك.</p>
+    <p>ليست مجرد عطور، بل تجربة حسية تأخذك إلى عالم من الأناقة والثقة. مستوحاة من أرقى البيوت العالمية، نقدم لك عطراً يعكس شخصيتك.</p>
   </div>
 
   <div class="section-title">تشكيلتنا المميزة</div>
@@ -357,7 +419,16 @@
 <div class="modal" id="productModal"><div class="modal-content"><div class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></div><div id="modalDynamicContent"></div></div></div>
 
 <!-- Cart -->
-<div class="cart-drawer" id="cartDrawer"><div class="cart-header"><span><i class="fas fa-bag-shopping"></i> سلة المشتريات</span><button id="closeCartBtn" style="background:none; border:none; font-size:1.5rem;"><i class="fas fa-times"></i></button></div><div class="cart-items" id="cartItemsList"></div><div class="cart-footer"><div style="display:flex; justify-content:space-between; font-weight:800; margin-bottom:15px;"><span>الإجمالي</span><span id="cartTotal">0 ج.م</span></div><div class="payment-icons"><span><i class="fab fa-vodafone"></i> فودافون كاش</span><span><i class="fas fa-mobile-alt"></i> إنستاباي</span></div><button class="whatsapp-btn" id="whatsappOrderBtn"><i class="fab fa-whatsapp"></i> تأكيد الطلب عبر واتساب</button><p style="font-size:12px; margin-top:12px;">سيتم إرسال طلبك مع طرق الدفع إلى خدمة العملاء</p></div></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header"><span><i class="fas fa-bag-shopping"></i> سلة المشتريات</span><button id="closeCartBtn" style="background:none; border:none; font-size:1.5rem; cursor:pointer;"><i class="fas fa-times"></i></button></div>
+  <div class="cart-items" id="cartItemsList"></div>
+  <div class="cart-footer">
+    <div style="display:flex; justify-content:space-between; font-weight:800; margin-bottom:15px;"><span>الإجمالي</span><span id="cartTotal">0 ج.م</span></div>
+    <div class="payment-icons"><span><i class="fab fa-vodafone"></i> فودافون كاش</span><span><i class="fas fa-mobile-alt"></i> إنستاباي</span></div>
+    <button class="whatsapp-btn" id="whatsappOrderBtn"><i class="fab fa-whatsapp"></i> تأكيد الطلب عبر واتساب</button>
+    <p style="font-size:12px; margin-top:12px;">سيتم إرسال طلبك إلى خدمة العملاء لتأكيد الدفع والشحن</p>
+  </div>
+</div>
 
 <footer>
   <div class="social-links">
@@ -366,18 +437,19 @@
     <a href="https://www.facebook.com/people/SWYR/61563925810810/" class="social-link"><i class="fab fa-facebook-f"></i></a>
     <a href="https://www.linkedin.com/company/swyr-perfumes/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
   </div>
-  <p>© 2025 SWYR - عطور أصلية 100% | شحن سريع لجميع المحافظات</p>
+  <p>© 2025 SWYR - عطور أصلية 100% | شحن سريع لجميع المحافظات | تصميم عصري يعكس هويتك</p>
 </footer>
+
 <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
 
 <script>
-  // قائمة المنتجات المتطورة مع وصف كامل وصور SVG محسنة (يمكن استبدالها بـ jpg)
+  // بيانات المنتجات مع وصف طويل مقنع
   const products = [
-    { id:1, name:"سي باشن", price50:300, price100:550, badge:"عرض خاص", img:"https://via.placeholder.com/300x300?text=Sea+Passion", shortDesc:"مزيج استوائي يدوم طويلاً", fullDesc:`<strong>رائحة العطر:</strong> مزيج من الأناناس والياسمين والمسك الأبيض.<br><strong>المكونات:</strong> مقدمة: جريب فروت، برغموت. قلب: زهر البرتقال، ياسمين. قاعدة: فانيليا، خشب الأرز.<br><strong>الأوقات المناسبة:</strong> نهار الصيف، المناسبات الصباحية، العمل.<br><strong>من يناسبه:</strong> شخصية جريئة تحب الانطلاق والثقة.` },
-    { id:2, name:"بلاك لاكوست", price50:300, price100:550, badge:"الأكثر مبيعاً", img:"https://via.placeholder.com/300x300?text=Black+Lacoste", shortDesc:"أناقة رياضية بنضارة حمضيات", fullDesc:`<strong>رائحة العطر:</strong> حمضيات منعشة مع خشب الأرز.<br><strong>المكونات:</strong> ليمون، إكليل الجبل، زهر البرتقال، جوزة الطيب.<br><strong>الأوقات المناسبة:</strong> الرياضة، النهار، العمل.<br><strong>من يناسبه:</strong> الرجل العصري النشيط.` },
-    { id:3, name:"212 سكسي", price50:300, price100:550, badge:null, img:"https://via.placeholder.com/300x300?text=212+Sexy", shortDesc:"سحر زهري لا يقاوم", fullDesc:`<strong>رائحة العطر:</strong> زهور بيضاء ومسك ناعم.<br><strong>المكونات:</strong> البرغموت، الفاوانيا، الأرز، الفانيليا.<br><strong>الأوقات:</strong> سهرات رومانسية، مواعيد خاصة.<br><strong>من يناسبه:</strong> المرأة الجذابة الواثقة.` },
-    { id:4, name:"جوتشي فلورا", price50:300, price100:550, badge:"خصم 40%", img:"https://via.placeholder.com/300x300?text=Gucci+Flora", shortDesc:"زهور ساحرة ولمسة أنثوية", fullDesc:`<strong>الرائحة:</strong> زهور الجاردينيا والماندرين.<br><strong>المكونات:</strong> اليوسفي، الورد، السوسن، المسك.<br><strong>المناسبة:</strong> النهار، الربيع، الحفلات.<br><strong>المرأة:</strong> الرومانسية الأنيقة.` },
-    { id:5, name:"كريستال نوار", price50:300, price100:550, badge:null, img:"https://via.placeholder.com/300x300?text=Crystal+Noir", shortDesc:"فخامة المسك والعنبر", fullDesc:`<strong>الرائحة:</strong> عنبر، مسك أسود، زهور بيضاء.<br><strong>المكونات:</strong> الفلفل الوردي، زنبق الوادي، الأرز.<br><strong>الأوقات:</strong> الليل، الشتاء، المناسبات الرسمية.<br><strong>الشخصية:</strong> غامض وقوي.` }
+    { id:1, name:"سي باشن", price50:300, price100:550, badge:"عرض خاص", img:"https://placehold.co/400x400/F5EFE9/C6A43F?text=Sea+Passion", shortDesc:"مزيج استوائي يدوم طويلاً", fullDesc:`<strong>الرائحة:</strong> مزيج استوائي جذاب يجمع بين الأناناس والياسمين والمسك الأبيض.<br><br><strong>المكونات العطرية:</strong> مقدمة (جريب فروت، برغموت) - قلب (زهر البرتقال، ياسمين) - قاعدة (فانيليا، خشب الأرز).<br><br><strong>الأوقات المناسبة:</strong> نهار الصيف، المناسبات الصباحية، العمل.<br><br><strong>لمن يناسب:</strong> شخصية جريئة تحب الانطلاق والثقة.` },
+    { id:2, name:"بلاك لاكوست", price50:300, price100:550, badge:"الأكثر مبيعاً", img:"https://placehold.co/400x400/F5EFE9/A07E2E?text=Black+Lacoste", shortDesc:"أناقة رياضية بنضارة حمضيات", fullDesc:`<strong>الرائحة:</strong> حمضيات منعشة مع خشب الأرز وجوزة الطيب.<br><br><strong>المكونات:</strong> ليمون، إكليل الجبل، زهر البرتقال.<br><br><strong>الأوقات المناسبة:</strong> الرياضة، النهار، العمل.<br><br><strong>من يناسبه:</strong> الرجل العصري النشيط.` },
+    { id:3, name:"212 سكسي", price50:300, price100:550, badge:null, img:"https://placehold.co/400x400/F5EFE9/C6A43F?text=212+Sexy", shortDesc:"سحر زهري لا يقاوم", fullDesc:`<strong>الرائحة:</strong> زهور بيضاء ومسك ناعم وفانيليا.<br><br><strong>المكونات:</strong> البرغموت، الفاوانيا، الأرز، الفانيليا.<br><br><strong>الأوقات:</strong> سهرات رومانسية، مواعيد خاصة.<br><br><strong>من يناسبه:</strong> المرأة الجذابة الواثقة.` },
+    { id:4, name:"جوتشي فلورا", price50:300, price100:550, badge:"خصم 40%", img:"https://placehold.co/400x400/F5EFE9/B88181?text=Gucci+Flora", shortDesc:"زهور ساحرة ولمسة أنثوية", fullDesc:`<strong>الرائحة:</strong> زهور الجاردينيا والماندرين والمسك.<br><br><strong>المكونات:</strong> اليوسفي، الورد، السوسن.<br><br><strong>المناسبة:</strong> النهار، الربيع، الحفلات.<br><br><strong>المرأة:</strong> الرومانسية الأنيقة.` },
+    { id:5, name:"كريستال نوار", price50:300, price100:550, badge:null, img:"https://placehold.co/400x400/F5EFE9/5C4B3A?text=Crystal+Noir", shortDesc:"فخامة المسك والعنبر", fullDesc:`<strong>الرائحة:</strong> عنبر، مسك أسود، زهور بيضاء.<br><br><strong>المكونات:</strong> الفلفل الوردي، زنبق الوادي، الأرز.<br><br><strong>الأوقات:</strong> الليل، الشتاء، المناسبات الرسمية.<br><br><strong>الشخصية:</strong> غامض وقوي.` }
   ];
 
   let cart = [];
@@ -392,8 +464,8 @@
   function renderProducts() {
     const grid = document.getElementById('productsGrid');
     grid.innerHTML = products.map(p => `
-      <div class="product-card" data-id="${p.id}">
-        ${p.badge ? `<div style="position:absolute; top:15px; right:15px; background:var(--gold); padding:5px 15px; border-radius:30px; font-size:0.7rem; font-weight:bold;">${p.badge}</div>` : ''}
+      <div class="product-card" data-id="${p.id}" style="position:relative;">
+        ${p.badge ? `<span style="position:absolute; top:15px; right:15px; background:var(--gold); color:var(--text-primary); padding:4px 14px; border-radius:40px; font-size:0.7rem; font-weight:bold; z-index:2;">${p.badge}</span>` : ''}
         <div class="product-img"><img src="${p.img}" alt="${p.name}"></div>
         <div class="product-info">
           <div class="product-title">${p.name}</div>
@@ -416,8 +488,7 @@
   function updateModalContent() {
     if (!currentProduct) return;
     const price = currentSize === "50ml" ? currentProduct.price50 : currentProduct.price100;
-    const modalDiv = document.getElementById('modalDynamicContent');
-    modalDiv.innerHTML = `
+    document.getElementById('modalDynamicContent').innerHTML = `
       <div class="modal-img"><img src="${currentProduct.img}" alt="${currentProduct.name}"></div>
       <div class="modal-title">${currentProduct.name}</div>
       <div class="modal-price">${price * currentQty} ج.م</div>
@@ -445,7 +516,7 @@
     if (idx !== -1) cart[idx].quantity += qty;
     else cart.push({ id, name, price, quantity: qty, size });
     updateCartUI();
-    showNotif(`تم إضافة ${name}`);
+    showNotif(`✨ تم إضافة ${name} إلى سلة التسوق`);
   }
 
   function updateCartUI() {
@@ -453,11 +524,11 @@
     const totalPrice = cart.reduce((s,i) => s + i.price * i.quantity, 0);
     document.getElementById('cartCount').innerText = totalQty;
     document.getElementById('cartTotal').innerHTML = totalPrice + ' ج.م';
-    if(cart.length === 0) { document.getElementById('cartItemsList').innerHTML = '<div style="text-align:center">سلة فارغة</div>'; return; }
+    if(cart.length === 0) { document.getElementById('cartItemsList').innerHTML = '<div style="text-align:center; padding:30px;">🛍️ سلة فارغة</div>'; return; }
     document.getElementById('cartItemsList').innerHTML = cart.map((item, idx) => `
-      <div style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px solid var(--rose); padding-bottom:12px;">
+      <div style="display:flex; justify-content:space-between; margin-bottom:20px; border-bottom:1px solid var(--border); padding-bottom:12px;">
         <div><strong>${item.name}</strong><br>${item.price} ج.م × ${item.quantity}</div>
-        <button class="remove-item" data-idx="${idx}" style="background:var(--rose); border:none; border-radius:50px; width:32px;"><i class="fas fa-trash"></i></button>
+        <button class="remove-item" data-idx="${idx}" style="background:var(--rose); border:none; border-radius:50px; width:36px; height:36px; cursor:pointer;"><i class="fas fa-trash"></i></button>
       </div>
     `).join('');
     document.querySelectorAll('.remove-item').forEach(btn => btn.addEventListener('click', (e) => { cart.splice(parseInt(btn.dataset.idx), 1); updateCartUI(); }));
@@ -465,24 +536,24 @@
 
   function showNotif(msg) {
     let d = document.createElement('div');
-    d.innerText = msg;
-    d.style.cssText = 'position:fixed;bottom:20px;right:20px;background:var(--gold);color:var(--text-dark);padding:12px 24px;border-radius:50px;z-index:1200;font-weight:bold';
+    d.innerHTML = msg;
+    d.style.cssText = 'position:fixed;bottom:25px;right:25px;background:var(--gold);color:var(--text-primary);padding:14px 28px;border-radius:50px;z-index:1200;font-weight:bold;box-shadow:var(--shadow);';
     document.body.appendChild(d);
-    setTimeout(() => d.remove(), 2000);
+    setTimeout(() => d.remove(), 2500);
   }
 
-  // Cart Drawer
+  // Event Listeners
   document.getElementById('cartIcon').addEventListener('click', () => document.getElementById('cartDrawer').classList.add('open'));
   document.getElementById('closeCartBtn').addEventListener('click', () => document.getElementById('cartDrawer').classList.remove('open'));
   document.getElementById('closeModalBtn').addEventListener('click', () => document.getElementById('productModal').classList.remove('open'));
   document.getElementById('whatsappOrderBtn').addEventListener('click', () => {
-    if(cart.length === 0) { alert('السلة فارغة أضف منتجات أولاً'); return; }
-    let message = 'طلب جديد من SWYR:\n';
-    cart.forEach(i => message += `- ${i.name} × ${i.quantity} = ${i.price * i.quantity} ج.م\n`);
-    message += `الإجمالي: ${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ج.م\nطرق الدفع: فودافون كاش أو إنستاباي`;
-    window.open(`https://wa.me/201234567890?text=${encodeURIComponent(message)}`, '_blank');
+    if(cart.length === 0) { alert('🛒 سلة التسوق فارغة، أضف منتجات أولاً.'); return; }
+    let msg = '📦 طلب جديد من SWYR:\n';
+    cart.forEach(i => msg += `- ${i.name} × ${i.quantity} = ${i.price * i.quantity} ج.م\n`);
+    msg += `💰 الإجمالي: ${cart.reduce((s,i)=>s+i.price*i.quantity,0)} ج.م\n💳 وسائل الدفع: فودافون كاش أو إنستاباي`;
+    window.open(`https://wa.me/201234567890?text=${encodeURIComponent(msg)}`, '_blank');
   });
-  // scroll top
+  
   window.addEventListener('scroll', () => document.getElementById('scrollTop').classList.toggle('show', window.scrollY > 300));
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
