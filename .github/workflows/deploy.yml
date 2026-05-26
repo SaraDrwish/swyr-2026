@@ -1,5 +1,5 @@
-
-name: Deploy to GitHub Pages
+# .github/workflows/deploy.yml
+name: CI/CD Pipeline (Docker + GitHub Pages)
 
 on:
   push:
@@ -16,6 +16,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  docker-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/swyr-2026:latest
+
   deploy:
     environment:
       name: github-pages
